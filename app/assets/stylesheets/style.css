@@ -1,0 +1,29 @@
+body {
+  background-color: #f5f5f5 !important;
+}
+
+.border {
+  background-color: white !important;
+}
+
+.btn-primary {
+  width: 40%;
+  background-color: #1b447a !important;
+  border-color: #1b447a !important;
+}
+
+.label {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  /* identical to box height */
+
+  letter-spacing: 0.4px;
+  color: #1b447a;
+}
+
+.navbar-light {
+  background-color: white !important;
+}
