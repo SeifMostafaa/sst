@@ -8,7 +8,7 @@ class UserForm extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.firstNameRef = React.createRef();
-    this.middleNameRef = React.createRef();
+    this.secondNameRef = React.createRef();
     this.lastNameRef = React.createRef();
     this.roleRef = React.createRef();
     this.localeRef = React.createRef();
@@ -29,7 +29,7 @@ class UserForm extends React.Component {
       .post('/api/v1/users', {
         user: {
           first_name: this.firstNameRef.current.value,
-          middle_name: this.middleNameRef.current.value,
+          second_name: this.secondNameRef.current.value,
           // last_name: this.lastNameRef.current.value,
           // role: this.roleRef.current.value,
           // locale: this.localeRef.current.value,
@@ -71,7 +71,7 @@ class UserForm extends React.Component {
             <input
               type='text'
               name='middle-name'
-              ref={this.middleNameRef}
+              ref={this.secondNameRef}
               required
               className='form-control'
               id='middle-name'

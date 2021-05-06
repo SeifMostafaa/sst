@@ -6,8 +6,10 @@ class User < ApplicationRecord
 
   acts_as_paranoid
 
+  enum city: %i[alexandria]
   enum gender: %i[female male]
   enum locale: %i[ar en]
+  enum religion: %i[muslim christian]
   enum role: %i[admin parents staff student teacher]
   enum status: %i[active graduated inactive suspended]
 
