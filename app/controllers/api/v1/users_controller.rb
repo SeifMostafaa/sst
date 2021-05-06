@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authenticate_user!
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+  before_action :authenticate_user
   before_action :set_user, only: [:show, :edit, :update, :destroy]
     def index
       if authorized?
@@ -60,6 +61,7 @@ class Api::V1::UsersController < ApplicationController
         end
 
         def authorized?
+          return false unless current_user
           admin? || staff?
         end
 

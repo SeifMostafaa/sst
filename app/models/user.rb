@@ -10,4 +10,10 @@ class User < ApplicationRecord
   enum locale: %i[ar en]
   enum role: %i[admin parents staff student teacher]
   enum status: %i[active graduated inactive suspended]
+
+  def generate_jwt
+    JWT.encode({ id: id,
+                exp: 60.days.from_now.to_i },
+               Rails.application.secrets.secret_key_base)
+  end
 end
