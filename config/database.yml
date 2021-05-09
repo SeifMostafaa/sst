@@ -81,7 +81,8 @@ test:
 #
 production:
   database: <%= ENV['RDS_DB_NAME'] %>
+  adapter: <%= ENV['RDS_ADAPTER'] %>
   username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RSD_PASSWORD'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
   host: <%= ENV['RDS_HOSTNAME'] %>
   port: <%= ENV['RDS_PORT'] %>
