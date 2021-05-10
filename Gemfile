@@ -26,6 +26,8 @@ gem 'jwt'
 
 gem 'acts_as_paranoid', '~> 0.7.0'
 
+gem 'apipie-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
