@@ -9,8 +9,8 @@ class User < ApplicationRecord
   enum city: %i[alexandria]
   enum gender: %i[female male]
   enum locale: %i[ar en]
-  enum religion: %i[muslim christian]
-  enum role: %i[admin parents staff student teacher]
+  enum religion: %i[christian muslim]
+  enum role: %i[admin engineer parents staff student teacher]
   enum status: %i[active graduated inactive suspended]
 
   def generate_jwt
