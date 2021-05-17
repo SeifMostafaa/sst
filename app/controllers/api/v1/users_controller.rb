@@ -56,6 +56,14 @@ class Api::V1::UsersController < ApplicationController
       end
     end
 
+    api :POST, "api/v1/users/forgot_password", "User Forgot Password"
+    param :email, String, desc: "User email"
+    returns :code => 404, :desc => "An unsuccessful response" do
+      property :error, String, :desc => "Email not found"
+    end
+    returns :code => 200, :desc => "A successful response" do
+      property :message, String, :desc => "You will receive an email with instructions on how to reset your password in a few minutes."
+    end
     def forgot_password
       @user = User.find_by_email(params[:email])
       if @user.present?
