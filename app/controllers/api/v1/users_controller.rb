@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   include ActionController::HttpAuthentication::Token::ControllerMethods
-  before_action :authenticate_user
+  before_action :authenticate_user, except: [:forgot_password]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
     def index
       if authorized?
@@ -53,6 +53,21 @@ class Api::V1::UsersController < ApplicationController
         end
       else
           handle_unauthorized
+      end
+    end
+
+    def forgot_password
+      @user = User.find_by_email(params[:email])
+      if @user.present?
+        @user.send_reset_password_instructions
+        render(
+          json: { "message": "You will receive an email with instructions on how to reset your password in a few minutes." }
+        )
+      else
+        render(
+          json: { "error": "Email not found" },
+          status: 404
+        )        
       end
     end
     private

@@ -12,7 +12,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       devise_for :users, controllers: { sessions: :sessions },
                          path_names: { sign_in: :login }
-      resources :users, only: [:index, :show, :create, :update, :destroy]
+      resources :users, only: [:index, :show, :create, :update, :destroy] do
+        collection do
+          post :forgot_password
+        end
+      end
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
