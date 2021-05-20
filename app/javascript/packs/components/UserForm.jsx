@@ -7,8 +7,8 @@ class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.firstNameRef = React.createRef();
-    this.secondNameRef = React.createRef();
+    this.fullNameArRef = React.createRef();
+    this.fullNameEnRef = React.createRef();
     this.lastNameRef = React.createRef();
     this.roleRef = React.createRef();
     this.localeRef = React.createRef();
@@ -28,8 +28,8 @@ class UserForm extends React.Component {
     axios
       .post('/api/v1/users', {
         user: {
-          first_name: this.firstNameRef.current.value,
-          second_name: this.secondNameRef.current.value,
+          full_name_ar: this.fullNameArRef.current.value,
+          full_name_en: this.fullNameEnRef.current.value,
           // last_name: this.lastNameRef.current.value,
           // role: this.roleRef.current.value,
           // locale: this.localeRef.current.value,
@@ -61,21 +61,21 @@ class UserForm extends React.Component {
           <div className='form-group col-md-8'>
             <input
               type='text'
-              name='first-name'
-              ref={this.firstNameRef}
+              name='full-name-ar'
+              ref={this.fullNameArRef}
               required
               className='form-control'
-              id='first-name'
-              placeholder='First Name'
+              id='full-name-ar'
+              placeholder='Full Name AR'
             />
             <input
               type='text'
-              name='middle-name'
-              ref={this.secondNameRef}
+              name='full-name-en'
+              ref={this.fullNameEnRef}
               required
               className='form-control'
-              id='middle-name'
-              placeholder='Middle Name'
+              id='full-name-en'
+              placeholder='Full Name EN'
             />
           </div>
           <div className='form-group col-md-4'>

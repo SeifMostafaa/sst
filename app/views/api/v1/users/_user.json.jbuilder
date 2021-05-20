@@ -1,2 +1,2 @@
-json.extract! user, :id, :username, :first_name, :second_name, :third_name, :last_name, :role, :locale, :phone, :date_of_birth, :status, :gender, :email, :national_id, :religion, :address, :city
+json.extract! user, :id, :username, :full_name_ar, :full_name_en, :role, :locale, :phone, :date_of_birth, :status, :gender, :email, :national_id, :religion, :address_ar, :address_en, :city
 json.token user.generate_jwt

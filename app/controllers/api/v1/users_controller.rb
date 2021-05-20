@@ -106,10 +106,8 @@ class Api::V1::UsersController < ApplicationController
 
         def user_params
           params.require(:user).permit(
-            :first_name,
-            :second_name,
-            :third_name,
-            :last_name,
+            :full_name_ar,
+            :full_name_en,          
             :role,
             :locale,
             :phone,
@@ -122,7 +120,8 @@ class Api::V1::UsersController < ApplicationController
             :password_confirmation,
             :religion,
             :national_id,
-            :address,
+            :address_ar,
+            :address_en,
             :city
           )
         end

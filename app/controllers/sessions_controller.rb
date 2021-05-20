@@ -10,10 +10,8 @@ class SessionsController < Devise::SessionsController
     property :user, Hash, :desc => "User object" do
       property :id, Integer, :desc => "User's ID"
       property :username, String, :desc => "User's Username"
-      property :first_name, String, :desc => "User's first name"
-      property :second_name, String, :desc => "User's second name"
-      property :third_name, String, :desc => "User's third name"
-      property :last_name, String, :desc => "User's last name"
+      property :full_name_ar, String, :desc => "User's arabic full name"
+      property :full_name_en, String, :desc => "User's english full name"
       property :role, ['admin', 'engineer', 'parents', 'staff', 'student', 'teacher'], :desc => "User's role, one of 6 possible string values"
       property :locale, ['ar', 'en'], :desc => "User's locale language, one of 2 possible string values"
       property :phone, String, :desc => "User's phone number"
@@ -23,7 +21,8 @@ class SessionsController < Devise::SessionsController
       property :email, String, :desc => "User's email address"
       property :national_id, String, :desc => "User's national ID"
       property :religion, ['christian', 'muslim'], :desc => "User's religion, one of 2 possible string values"
-      property :address, String, :desc => "User's address"
+      property :address_ar, String, :desc => "User's arabic address"
+      property :address_en, String, :desc => "User's english address"
       property :city, ['alexandria'], :desc => "User's city, one of 1 possible string values"
       property :token, String, :desc => "User's token"
     end
