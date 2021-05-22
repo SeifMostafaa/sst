@@ -63,3 +63,834 @@ Major.create([
                  status: 'suspended'
                }
              ])
+
+# Subject
+Subject.create([
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+    هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+    يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+    الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+    والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+    لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+    مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+    طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+    واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+    مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+    discrete structure in the field of computer science. The topics that are
+    covered in this course are set theory, proof techniques, relations,
+    functions, recurrence relations, counting methods, graph theory, trees
+    and finite automata. At the end of the course, the students should be able
+    to use set theory, relations and functions to solve computer science
+    problems, analyze and solve problems using recurrence relations and
+    counting methods, apply graph theory and trees in real world problems
+    and use deterministic finite automata finite state machines to model
+    electronic devices and problems.',
+                   major_id: Major.first.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+    التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+    يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+    اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+    يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+    أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+    التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+    practice on problem solving techniques by using the structured approach.
+    Students are required to develop programs using C++ programming
+    language, in order to solve simple to moderate problems. The course
+    covers the following: pre-processor directives, constants and variables,
+    data types, input and output statements, control structures: sequential,
+    selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+    التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+    يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+    اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+    يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+    أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+    التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+    practice on problem solving techniques by using the structured approach.
+    Students are required to develop programs using C++ programming
+    language, in order to solve simple to moderate problems. The course
+    covers the following: pre-processor directives, constants and variables,
+    data types, input and output statements, control structures: sequential,
+    selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+    هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+    يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+    الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+    والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+    لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+    مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+    طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+    واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+    مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+    discrete structure in the field of computer science. The topics that are
+    covered in this course are set theory, proof techniques, relations,
+    functions, recurrence relations, counting methods, graph theory, trees
+    and finite automata. At the end of the course, the students should be able
+    to use set theory, relations and functions to solve computer science
+    problems, analyze and solve problems using recurrence relations and
+    counting methods, apply graph theory and trees in real world problems
+    and use deterministic finite automata finite state machines to model
+    electronic devices and problems.',
+                   major_id: Major.second.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+    التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+    يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+    اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+    يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+    أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+    التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+    practice on problem solving techniques by using the structured approach.
+    Students are required to develop programs using C++ programming
+    language, in order to solve simple to moderate problems. The course
+    covers the following: pre-processor directives, constants and variables,
+    data types, input and output statements, control structures: sequential,
+    selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+    التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+    يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+    اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+    يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+    أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+    التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+    practice on problem solving techniques by using the structured approach.
+    Students are required to develop programs using C++ programming
+    language, in order to solve simple to moderate problems. The course
+    covers the following: pre-processor directives, constants and variables,
+    data types, input and output statements, control structures: sequential,
+    selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+    هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+    يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+    الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+    والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+    لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+    مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+    طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+    واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+    مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+    discrete structure in the field of computer science. The topics that are
+    covered in this course are set theory, proof techniques, relations,
+    functions, recurrence relations, counting methods, graph theory, trees
+    and finite automata. At the end of the course, the students should be able
+    to use set theory, relations and functions to solve computer science
+    problems, analyze and solve problems using recurrence relations and
+    counting methods, apply graph theory and trees in real world problems
+    and use deterministic finite automata finite state machines to model
+    electronic devices and problems.',
+                   major_id: Major.third.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '1',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+    التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+    يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+    اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+    يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+    أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+    التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+    practice on problem solving techniques by using the structured approach.
+    Students are required to develop programs using C++ programming
+    language, in order to solve simple to moderate problems. The course
+    covers the following: pre-processor directives, constants and variables,
+    data types, input and output statements, control structures: sequential,
+    selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '3',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+    التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+    يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+    اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+    يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+    أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+    التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+    practice on problem solving techniques by using the structured approach.
+    Students are required to develop programs using C++ programming
+    language, in order to solve simple to moderate problems. The course
+    covers the following: pre-processor directives, constants and variables,
+    data types, input and output statements, control structures: sequential,
+    selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '3',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.first.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '3',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '3',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.second.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.third.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '2',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.first.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '5',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '5',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '5',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.second.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '5',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '4',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '4',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.third.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '4',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '4',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '4',
+                   status: 'active'
+                 }, {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.first.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '6',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '5',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.first.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '3',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.second.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '4',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '6',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.second.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '6',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'يعرّف هذا المساق الطلاب بمبادئ وتطبيقات
+   هيكل منفصل في مجال علوم الكمبيوتر. الموضوعات التي
+   يشمل هذا المساق نظرية المجموعات ، وتقنيات الإثبات ، والعلاقات ،
+   الدوال ، علاقات التكرار ، طرق العد ، نظرية الرسم البياني ، الأشجار
+   والأوتوماتا المحدودة. في نهاية الدورة ، يجب أن يكون الطلاب قادرين على ذلك
+   لاستخدام نظرية المجموعات والعلاقات والوظائف لحل علوم الكمبيوتر
+   مشاكل وتحليل وحل المشكلات باستخدام علاقات التكرار و
+   طرق العد وتطبيق نظرية الرسم البياني والأشجار في مشاكل العالم الحقيقي
+   واستخدام آلات الحالة المحدودة الأوتوماتيكية الحتمية للنمذجة
+   مشاكل الأجهزة الإلكترونية.',
+                   description_en: 'This course introduces students to the principles and applications of
+   discrete structure in the field of computer science. The topics that are
+   covered in this course are set theory, proof techniques, relations,
+   functions, recurrence relations, counting methods, graph theory, trees
+   and finite automata. At the end of the course, the students should be able
+   to use set theory, relations and functions to solve computer science
+   problems, analyze and solve problems using recurrence relations and
+   counting methods, apply graph theory and trees in real world problems
+   and use deterministic finite automata finite state machines to model
+   electronic devices and problems.',
+                   major_id: Major.third.id,
+                   name_ar: 'هيكل منفصل',
+                   name_en: 'Discrete Structure',
+                   semester: '6',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'Programming Technique I',
+                   semester: '6',
+                   status: 'active'
+                 },
+                 {
+                   description_ar: 'كموضوع أساسي ، تزود هذه الدورة الطلاب بالنظرية و
+   التدرب على تقنيات حل المشكلات باستخدام النهج المنظم.
+   يُطلب من الطلاب تطوير برامج باستخدام برمجة C ++
+   اللغة ، من أجل حل المشكلات البسيطة إلى المتوسطة. الفصل
+   يغطي ما يلي: توجيهات ما قبل المعالج والثوابت والمتغيرات ،
+   أنواع البيانات ، بيانات الإدخال والإخراج ، هياكل التحكم: متسلسلة ،
+   التحديد والحلقة ، الوظائف المضمنة والمحددة من قبل المستخدم ، المصفوفات الأحادية والثنائية الأبعاد ، عمليات الملفات ، المؤشرات ، وأنواع البيانات المنظمة.',
+                   description_en: 'As a fundamental subject, this course equips the students with theory and
+   practice on problem solving techniques by using the structured approach.
+   Students are required to develop programs using C++ programming
+   language, in order to solve simple to moderate problems. The course
+   covers the following: pre-processor directives, constants and variables,
+   data types, input and output statements, control structures: sequential,
+   selection and loop, built-in and user-defined functions, single and twodimensional arrays, file operations, pointers, and structured data types.',
+                   major_id: Major.third.id,
+                   name_ar: 'تقنية البرمجة I',
+                   name_en: 'المنطق الرقمي',
+                   semester: '6',
+                   status: 'active'
+                 }
+               ])
