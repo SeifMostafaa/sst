@@ -105,6 +105,26 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+    def forgot_password
+     @user = User.find_by_email(params[:email])
+     if @user.present?
+       @user.send_reset_password_instructions
+       render(
+         json: { "message": "You will receive an email with instructions on how to reset your password in a few minutes." }
+       )
+     else
+       render(
+         json: { "error": "Email not found" },
+         status: 404
+       )        
+     end
+    end
+
+    private
+        def set_user
+          @user = User.find(params[:id])
+        end
+
   private
 
   def set_user
