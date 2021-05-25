@@ -3,16 +3,21 @@
 # Table name: subjects
 #
 #  id             :bigint           not null, primary key
-#  name_en        :string
-#  name_ar        :string
-#  major_id       :bigint
+#  deleted_at     :datetime
 #  description_ar :string
 #  description_en :string
+#  name_ar        :string
+#  name_en        :string
+#  semester       :integer
 #  status         :integer
-#  deleted_at     :datetime
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
-#  semester       :integer
+#  major_id       :bigint
+#
+# Indexes
+#
+#  index_subjects_on_deleted_at  (deleted_at)
+#  index_subjects_on_major_id    (major_id)
 #
 class Subject < ApplicationRecord
   acts_as_paranoid
@@ -21,4 +26,5 @@ class Subject < ApplicationRecord
   enum semester: %i[1 2 3 4 5 6]
 
   belongs_to :major
+  has_many :subject_classes
 end
