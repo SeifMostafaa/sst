@@ -3,12 +3,16 @@
 # Table name: academic_years
 #
 #  id         :bigint           not null, primary key
-#  start_date :datetime
+#  deleted_at :datetime
 #  end_date   :datetime
 #  semester   :integer
-#  deleted_at :datetime
+#  start_date :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_academic_years_on_deleted_at  (deleted_at)
 #
 class AcademicYear < ApplicationRecord
   acts_as_paranoid

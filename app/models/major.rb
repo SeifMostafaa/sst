@@ -3,14 +3,18 @@
 # Table name: majors
 #
 #  id             :bigint           not null, primary key
-#  name_en        :string
-#  name_ar        :string
-#  description_en :string
-#  description_ar :string
-#  status         :integer
 #  deleted_at     :datetime
+#  description_ar :string
+#  description_en :string
+#  name_ar        :string
+#  name_en        :string
+#  status         :integer
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#
+# Indexes
+#
+#  index_majors_on_deleted_at  (deleted_at)
 #
 class Major < ApplicationRecord
   acts_as_paranoid

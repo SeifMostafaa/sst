@@ -3,33 +3,40 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
+#  address_ar             :string
+#  address_en             :string
+#  city                   :integer
+#  current_sign_in_at     :datetime
+#  current_sign_in_ip     :string
+#  date_of_birth          :date
+#  deleted_at             :datetime
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
-#  reset_password_token   :string
-#  reset_password_sent_at :datetime
-#  remember_created_at    :datetime
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
-#  role                   :integer
+#  full_name_ar           :string
+#  full_name_en           :string
+#  gender                 :integer
+#  last_sign_in_at        :datetime
+#  last_sign_in_ip        :string
 #  locale                 :integer
 #  phone                  :string
-#  date_of_birth          :date
-#  status                 :integer
-#  gender                 :integer
-#  username               :string
-#  sign_in_count          :integer          default(0), not null
-#  current_sign_in_at     :datetime
-#  last_sign_in_at        :datetime
-#  current_sign_in_ip     :string
-#  last_sign_in_ip        :string
-#  deleted_at             :datetime
-#  national_id            :string
 #  religion               :integer
-#  city                   :integer
-#  full_name_en           :string
-#  full_name_ar           :string
-#  address_en             :string
-#  address_ar             :string
+#  remember_created_at    :datetime
+#  reset_password_sent_at :datetime
+#  reset_password_token   :string
+#  role                   :integer
+#  sign_in_count          :integer          default(0), not null
+#  status                 :integer
+#  username               :string
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  national_id            :string
+#
+# Indexes
+#
+#  index_users_on_deleted_at            (deleted_at)
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_username              (username) UNIQUE
 #
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
