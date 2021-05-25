@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: subject_class_teachers
+# Table name: subject_class_students
 #
 #  id               :bigint           not null, primary key
 #  deleted_at       :datetime
@@ -11,16 +11,16 @@
 #
 # Indexes
 #
-#  index_subject_class_teachers_on_deleted_at        (deleted_at)
-#  index_subject_class_teachers_on_subject_class_id  (subject_class_id)
-#  index_subject_class_teachers_on_user_id           (user_id)
+#  index_subject_class_students_on_deleted_at        (deleted_at)
+#  index_subject_class_students_on_subject_class_id  (subject_class_id)
+#  index_subject_class_students_on_user_id           (user_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (subject_class_id => subject_classes.id)
 #  fk_rails_...  (user_id => users.id)
 #
-class SubjectClassTeacher < ApplicationRecord
+class SubjectClassStudent < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :subject_class

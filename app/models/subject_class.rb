@@ -26,4 +26,7 @@ class SubjectClass < ApplicationRecord
 
   belongs_to :subject
   has_many :subject_class_teachers
+  has_many :subject_class_students
+  has_many :users, through: :subject_class_teachers
+  has_many :users, through: :subject_class_students
 end
