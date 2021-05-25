@@ -22,4 +22,5 @@ class Major < ApplicationRecord
   enum status: %i[active suspended]
 
   has_many :subjects
+  has_many :users, through: :subjects
 end

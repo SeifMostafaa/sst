@@ -53,9 +53,14 @@ class User < ApplicationRecord
   enum role: %i[admin engineer parents staff student teacher]
   enum status: %i[active graduated inactive suspended]
 
+  has_many :subject_class_teachers
+  has_many :subject_class_students
+  has_many :subject_classes, through: :subject_class_teachers
+  has_many :subject_classes, through: :subject_class_students
+
   def generate_jwt
     JWT.encode({ id: id,
-                exp: 60.days.from_now.to_i },
+                 exp: 60.days.from_now.to_i },
                Rails.application.secrets.secret_key_base)
   end
 end

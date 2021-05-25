@@ -27,4 +27,5 @@ class Subject < ApplicationRecord
 
   belongs_to :major
   has_many :subject_classes
+  has_many :users, through: :subject_classes
 end
