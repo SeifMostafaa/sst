@@ -25,4 +25,5 @@ class SubjectClass < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :subject
+  has_many :subject_class_teachers
 end
