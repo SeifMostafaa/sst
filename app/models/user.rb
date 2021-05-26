@@ -58,6 +58,8 @@ class User < ApplicationRecord
   has_many :subject_classes, through: :subject_class_teachers
   has_many :subject_classes, through: :subject_class_students
 
+  validates :locale, presence: true
+
   def generate_jwt
     JWT.encode({ id: id,
                  exp: 60.days.from_now.to_i },
