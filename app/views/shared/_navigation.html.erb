@@ -7,7 +7,7 @@
           <% if user_signed_in? %>
           <div class="btn-group">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= content_tag( :h8, "Hello, #{current_user.full_name_en.split(" ").first}") %>
+              <%= content_tag( :h8, "Hello, #{current_user.full_name_en}") %>
             </button>
             <div class="dropdown-menu">
               <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
