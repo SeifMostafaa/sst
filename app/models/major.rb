@@ -23,4 +23,6 @@ class Major < ApplicationRecord
 
   has_many :subjects
   has_many :users, through: :subjects
+
+  attribute :status, default: :active
 end

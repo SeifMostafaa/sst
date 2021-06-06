@@ -124,3 +124,33 @@ button {
   border: none;
   background-color: transparent;
 }
+
+label[for='show'] {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 10px;
+  letter-spacing: 0.4px;
+  color: var(--primary-color);
+}
+
+.btn-back {
+  background-color: white !important;
+  border-radius: 500px !important;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 2px -1px;
+}
+
+.btn-edit {
+  background-color: var(--secondary-color) !important;
+  border-radius: 500px !important;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 2px -1px;
+}
+
+.fa-arrow-left {
+  color: grey !important;
+}

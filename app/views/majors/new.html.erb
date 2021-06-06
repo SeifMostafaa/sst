@@ -1,0 +1,17 @@
+<button class="btn btn-back">          
+  <%= link_to majors_path do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<h2>New Major</h2>
+
+<%= form_for(@major, url: majors_path, method: :post) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Create Major" %>
+  </div>
+<% end %>
+
