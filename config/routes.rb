@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'pages#dashboard', as: :authenticated_root
     resources :users
+    resources :majors
     apipie
   end
   devise_scope :user do

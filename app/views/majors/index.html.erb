@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
+    <div class="one-liner">
+      <h1>Majors</h1>
+      <button class="btn btn-add">             
+        <%= link_to new_major_path do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      </button>
+    </div>
+    <br/>
+
+    <table class="table table-striped">
+      <thead>
+        <tr class="label">
+          <th class="col-1">Name</th>
+          <th class="col-5">Description</th>
+          <th class="col-1">Status</th>
+          <th class="col-1">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @majors.each do |major| %>
+          <tr>
+            <td><%= major.name_en %></td>
+            <td><%= major.description_en %></td>
+            <td><%= major.status %></td>
+            <td>
+              <button>                
+                <%= link_to major do %>
+                  <i class="fas fa-eye"></i>
+                <% end %>
+              </button>
+              <button>                
+                <%= link_to edit_major_path(major) do %>
+                  <i class="fas fa-pencil-alt"></i>
+                <% end %>
+              </button>
+              <button>                
+                <%= link_to major, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+              </button>              
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>    
+  </div>
+</div>
