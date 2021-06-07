@@ -23,6 +23,11 @@ Rails.application.routes.draw do
           put :update_locale
         end
       end
+      resources :subject_classes do
+        collection do
+          get :by_student
+        end
+      end
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
