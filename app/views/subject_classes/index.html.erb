@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<button class="btn btn-back">          
+<button class="btn btn-back">
   <%= link_to subjects_path(major_id: @subject.major_id) do %>
     <i class="fas fa-arrow-left"></i>
   <% end %>
@@ -22,7 +22,8 @@
       <thead>
         <tr class="label">
           <th class="col-1">Year</th>
-          <th class="col-5">Number</th>
+          <th class="col-1">Number</th>
+          <th class="col-2">Teacher</th>
           <th class="col-2">Actions</th>
           <th class="col-1"></th>
         </tr>
@@ -33,6 +34,13 @@
           <tr>
             <td><%= subject_class.academic_year.year%></td>
             <td><%= subject_class.number %></td>
+            <% if subject_class&.subject_class_teachers.blank? %>
+              <td>
+                <%= link_to 'Click here to add a teacher', new_subject_class_teacher_path(subject_class_id: subject_class.id)%>
+              </td>
+            <% else %>
+              <td><%= subject_class&.subject_class_teachers&.first&.user&.full_name_en %></td>
+            <% end %>
             <td>             
               <button>                
                 <%= link_to edit_subject_class_path(subject_class, subject_id: @subject.id) do %>
@@ -46,7 +54,7 @@
               </button>              
             </td>
             <td>
-              <%= link_to 'Subjects', subject_classes_path(subject_id: @subject.id)%>
+              <%= link_to 'Teacher', subject_class_teachers_path(subject_class_id: subject_class.id)%>
             </td>
           </tr>
         <% end %>
