@@ -19,10 +19,14 @@
 class Major < ApplicationRecord
   acts_as_paranoid
 
+  after_initialize :set_status
+
   enum status: %i[active suspended]
 
   has_many :subjects
   has_many :users, through: :subjects
 
-  attribute :status, default: :active
+  def set_status
+    self.status ||= :active
+  end
 end

@@ -1,0 +1,31 @@
+<div class="row justify-content-start">
+  <div class="one-liner">
+    <button class="btn btn-back">          
+      <%= link_to subjects_path(major_id: @subject.major_id) do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    </button>
+    <button class="btn btn-edit">          
+      <%= link_to edit_subject_path(@subject, major_id: @subject.major_id) do %>
+        <i class="fas fa-pencil-alt" style="color=white"></i>
+      <% end %>
+    </button>
+  </div>
+  <div class=" col-lg-12 border shadow-md rounded p-5 mt-5">
+    <label for="show">Name EN</label>
+    <p><%= @subject.name_en %></p>
+    <label for="show">Name AR</label>
+    <p><%= @subject.name_ar %></p>
+    <label for="show">Status</label>              
+    <p><%= @subject.status %></p>
+    <label for="show">Description EN</label>
+    <p><%= @subject.description_en %></p>
+    <label for="show">Description AR</label>
+    <p><%= @subject.description_ar %></p>
+    <label for="show">Semester</label>
+    <p><%= @subject.semester %></p>
+    </div>
+    <br/>
+    <br>    
+  </div>
+</div>

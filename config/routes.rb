@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root 'pages#dashboard', as: :authenticated_root
     resources :users
     resources :majors
+    resources :subjects
     apipie
   end
   devise_scope :user do

@@ -1,0 +1,17 @@
+<button class="btn btn-back">          
+  <%= link_to subjects_path(major_id: @major.id) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<h2>Edit Subject</h2>
+
+<%= form_for(@subject, url: subject_path(major_id: @major.id), method: :put) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Update Subject" %>
+  </div>
+<% end %>
+

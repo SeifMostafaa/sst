@@ -21,6 +21,7 @@
 #
 class Subject < ApplicationRecord
   acts_as_paranoid
+  after_initialize :set_status
 
   enum status: %i[active suspended]
   enum semester: %i[1 2 3 4 5 6]
@@ -28,4 +29,8 @@ class Subject < ApplicationRecord
   belongs_to :major
   has_many :subject_classes
   has_many :users, through: :subject_classes
+
+  def set_status
+    self.status ||= :active
+  end
 end
