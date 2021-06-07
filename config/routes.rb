@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :subjects
     resources :subject_classes
     resources :subject_class_teachers
+    resources :subject_class_students
     apipie
   end
   devise_scope :user do
