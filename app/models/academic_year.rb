@@ -19,4 +19,6 @@ class AcademicYear < ApplicationRecord
   acts_as_paranoid
 
   enum semester: %i[1 2]
+
+  has_many :subject_classes
 end
