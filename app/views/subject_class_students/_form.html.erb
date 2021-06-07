@@ -1,0 +1,6 @@
+<div class="field">
+  <%= f.label "Student" %>
+  <%= f.collection_select :user_id, @students, :id, :full_name_en%><br />
+</div>
+
+<%= f.hidden_field :subject_class_id %>

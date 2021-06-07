@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<button class="btn btn-back">
+  <%= link_to subject_classes_path(subject_id: @subject_class.subject.id) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
+    <div class="one-liner">
+      <h1><%= @subject_class.subject.name_en %> <%= @subject_class.number %> Students</h1>
+      <button class="btn btn-add">             
+        <%= link_to new_subject_class_student_path(subject_class_id: @subject_class.id) do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      </button>
+    </div>
+    <br/>
+
+    <table class="table table-striped">
+      <thead>
+        <tr class="label">
+          <th class="col-2">Student Name</th>
+          <th class="col-2">Username</th>
+          <th class="col-2">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @subject_class_students.each do |subject_class_student| %>
+          <tr>
+            <td><%= subject_class_student.user.full_name_en%></td>
+            <td><%= subject_class_student.user.username%></td>
+            <td>             
+              <button>                
+                <%= link_to subject_class_student, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+              </button>              
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>    
+  </div>
+</div>
