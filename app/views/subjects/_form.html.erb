@@ -1,0 +1,24 @@
+<div class="field">
+  <%= f.label "English Name" %>
+  <%= f.text_field :name_en, autofocus: true, autocomplete: "name-en" %><br />
+</div>
+
+<div class="field">
+  <%= f.label "Arabic Name" %>
+  <%= f.text_field :name_ar, autocomplete: "name-ar", required: true %><br />
+</div>
+
+<div class="field">
+  <%= f.label "English Description" %>
+  <%= f.text_area :description_en, autofocus: true, autocomplete: "description-en" %><br />
+</div>
+
+<div class="field">
+  <%= f.label "Arabic Description" %>
+  <%= f.text_area :description_ar, autocomplete: "description-ar", required: true%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Semester" %>
+  <%= f.select :semester, collection: Subject.semesters.keys%><br />
+</div>
