@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <button class="btn btn-back">          
-  <%= link_to majors_path do %>
+  <%= link_to subjects_path(major_id: @subject.major_id) do %>
     <i class="fas fa-arrow-left"></i>
   <% end %>
 </button>
+
 <div class="row justify-content-md-center">
   <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
     <div class="one-liner">
-      <h1><%= @major.name_en %> Subjects</h1>
+      <h1><%= @subject.name_en %> Classes</h1>
       <button class="btn btn-add">             
-        <%= link_to new_subject_path(major_id: @major.id) do %>
+        <%= link_to new_subject_class_path(subject_id: @subject.id) do %>
           <i class="fas fa-plus"></i>
         <% end %>
       </button>
@@ -20,41 +21,32 @@
     <table class="table table-striped">
       <thead>
         <tr class="label">
-          <th class="col-1">Name</th>
-          <th class="col-5">Description</th>
-          <th class="col-1">Semester</th>
-          <th class="col-1">Status</th>
+          <th class="col-1">Year</th>
+          <th class="col-5">Number</th>
           <th class="col-2">Actions</th>
           <th class="col-1"></th>
         </tr>
       </thead>
 
       <tbody>
-        <% @subjects.each do |subject| %>
+        <% @subject_classes.each do |subject_class| %>
           <tr>
-            <td><%= subject.name_en %></td>
-            <td><%= subject.description_en %></td>
-            <td><%= subject.semester %></td>
-            <td><%= subject.status %></td>
-            <td>
+            <td><%= subject_class.academic_year.year%></td>
+            <td><%= subject_class.number %></td>
+            <td>             
               <button>                
-                <%= link_to subject do %>
-                  <i class="fas fa-eye"></i>
-                <% end %>
-              </button>
-              <button>                
-                <%= link_to edit_subject_path(subject, major_id: @major.id) do %>
+                <%= link_to edit_subject_class_path(subject_class, subject_id: @subject.id) do %>
                   <i class="fas fa-pencil-alt"></i>
                 <% end %>
               </button>
               <button>                
-                <%= link_to subject, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <%= link_to subject_class, method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fas fa-trash"></i>
                 <% end %>
               </button>              
             </td>
             <td>
-              <%= link_to 'Classes', subject_classes_path(subject_id: subject.id)%>
+              <%= link_to 'Subjects', subject_classes_path(subject_id: @subject.id)%>
             </td>
           </tr>
         <% end %>

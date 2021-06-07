@@ -1,0 +1,17 @@
+<button class="btn btn-back">          
+  <%= link_to subject_classes_path(subject_id: @subject_class.subject_id) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<h2>New Class</h2>
+
+<%= form_for(@subject_class, url: subject_class_path(id: @subject_class.id), method: :put) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Update Class" %>
+  </div>
+<% end %>
+

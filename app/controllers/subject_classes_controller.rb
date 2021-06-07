@@ -6,8 +6,6 @@ class SubjectClassesController < ApplicationController
     @subject_classes = @subject.subject_classes
   end
 
-  def show; end
-
   def new
     @subject_class = SubjectClass.new
   end
