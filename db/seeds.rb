@@ -898,15 +898,15 @@ Subject.create([
 # Academic Year
 AcademicYear.create([
                       {
-                        end_date: DateTime.now + 12.months, start_date: DateTime.now + 6.months, semester: '2'
+                        end_date: DateTime.now + 12.months, start_date: DateTime.now + 6.months, semester: '2', year: '2018/2019'
                       },
                       {
-                        end_date: DateTime.now + 6.months, start_date: DateTime.now, semester: '1'
+                        end_date: DateTime.now + 6.months, start_date: DateTime.now, semester: '1', year: '2018/2019'
                       },
                       {
-                        end_date: DateTime.now - 6.months, start_date: DateTime.now - 12.months, semester: '2'
+                        end_date: DateTime.now - 6.months, start_date: DateTime.now - 12.months, semester: '2', year: '2019/2020'
                       },
                       {
-                        end_date: DateTime.now - 12.months, start_date: DateTime.now - 18.months, semester: '1'
+                        end_date: DateTime.now - 12.months, start_date: DateTime.now - 18.months, semester: '1', year: '2019/2020'
                       }
                     ])

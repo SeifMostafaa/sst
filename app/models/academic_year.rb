@@ -7,6 +7,7 @@
 #  end_date   :datetime
 #  semester   :integer
 #  start_date :datetime
+#  year       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
