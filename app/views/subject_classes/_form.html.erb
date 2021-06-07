@@ -1,0 +1,9 @@
+<div class="field">
+  <%= f.label "Academic Year" %>
+  <%= f.collection_select :academic_year_id, AcademicYear.all.order(year: :desc), :id, :year%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Class Number" %>
+  <%= f.text_field :number, required: true%><br />
+</div>

@@ -25,6 +25,7 @@ class SubjectClass < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :subject
+  belongs_to :academic_year
   has_many :subject_class_teachers
   has_many :subject_class_students
   has_many :users, through: :subject_class_teachers
