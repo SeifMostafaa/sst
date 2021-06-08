@@ -18,8 +18,8 @@ end
 end
 
 20.times do |i|
-  User.create!(email: "user-#{i + 703}@example.com", password: 'password', password_confirmation: 'password',
-               full_name_ar: 'مجدي محمود محمد حامد', full_name_en: 'Magdy Mahmoud Mohamed Hamed', role: :teacher, locale: :en, phone: "+201111111#{i + 303}", date_of_birth: Date.today, status: :active, gender: :female, username: "user#{i + 703}")
+  User.create(email: "user-#{i + 703}@example.com", password: 'password', password_confirmation: 'password',
+              full_name_ar: 'مجدي محمود محمد حامد', full_name_en: 'Magdy Mahmoud Mohamed Hamed', role: :teacher, locale: :en, phone: "+201111111#{i + 303}", date_of_birth: Date.today, status: :active, gender: :female, username: "user#{i + 703}")
 end
 
 20.times do |i|
