@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_07_111354) do
+ActiveRecord::Schema.define(version: 2021_06_10_094958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,34 @@ ActiveRecord::Schema.define(version: 2021_06_07_111354) do
     t.index ["deleted_at"], name: "index_academic_years_on_deleted_at"
   end
 
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
   create_table "majors", force: :cascade do |t|
     t.string "name_en"
     t.string "name_ar"
@@ -36,6 +64,17 @@ ActiveRecord::Schema.define(version: 2021_06_07_111354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deleted_at"], name: "index_majors_on_deleted_at"
+  end
+
+  create_table "subject_class_materials", force: :cascade do |t|
+    t.bigint "subject_class_id", null: false
+    t.string "name_en"
+    t.string "name_ar"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["deleted_at"], name: "index_subject_class_materials_on_deleted_at"
+    t.index ["subject_class_id"], name: "index_subject_class_materials_on_subject_class_id"
   end
 
   create_table "subject_class_students", force: :cascade do |t|
@@ -121,6 +160,9 @@ ActiveRecord::Schema.define(version: 2021_06_07_111354) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "subject_class_materials", "subject_classes"
   add_foreign_key "subject_class_students", "subject_classes"
   add_foreign_key "subject_class_students", "users"
   add_foreign_key "subject_class_teachers", "subject_classes"
