@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<button class="btn btn-back">
+  <%= link_to subject_classes_path(subject_id: @subject_class.subject_id) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
+    <div class="one-liner">
+      <h1><%= @subject_class.subject.name_en %> <%= @subject_class.number %> Materials</h1>
+      <button class="btn btn-add">             
+        <%= link_to new_subject_class_material_path(subject_class_id: @subject_class.id) do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
+      </button>
+    </div>
+    <br/>
+
+    <table class="table table-striped">
+      <thead>
+        <tr class="label">
+          <th class="col-2">Name</th>
+          <th class="col-2">File</th>
+          <th class="col-2">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @subject_class_materials.each do |subject_class_material| %>
+          <tr>
+            <td><%= subject_class_material.name_en%></td>
+            <td><%= link_to 'Download File', rails_blob_path(subject_class_material.file, disposition: "attachment")%></td>
+            <td>             
+              <button>                
+                <%= link_to subject_class_material, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+              </button>              
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>    
+  </div>
+</div>

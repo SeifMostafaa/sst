@@ -1,0 +1,17 @@
+<button class="btn btn-back">          
+  <%= link_to subject_class_materials_path(subject_class_id: @subject_class.id) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<h2>New Material</h2>
+
+<%= form_for(@subject_class_material, url: subject_class_materials_path, method: :post) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Create Material" %>
+  </div>
+<% end %>
+
