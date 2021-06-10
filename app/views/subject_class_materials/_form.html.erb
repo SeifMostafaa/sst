@@ -1,0 +1,16 @@
+<%= f.hidden_field :subject_class_id %>
+
+<div class="field">
+  <%= f.label "Material Name (Arabic)" %>
+  <%= f.text_field :name_ar, required: true%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Material Name (English)" %>
+  <%= f.text_field :name_en%><br />
+</div>
+
+<div class="field">
+  <%= f.label "File" %>
+  <%= f.file_field :file, required: true%><br />
+</div>
