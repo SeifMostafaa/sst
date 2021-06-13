@@ -7,6 +7,7 @@
 #  end_date   :datetime
 #  semester   :integer
 #  start_date :datetime
+#  status     :integer
 #  year       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -19,6 +20,7 @@ class AcademicYear < ApplicationRecord
   acts_as_paranoid
 
   enum semester: %i[1 2]
+  enum status: %i[complete current]
 
   has_many :subject_classes
 end
