@@ -1,0 +1,19 @@
+<div class="field">
+  <%= f.label "Day" %>
+  <%= f.select :day, collection: TimeTable.days.keys%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Period" %>
+  <%= f.text_field :period, required: true%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Start-Time" %>
+  <%= f.time_field :start_time, required: true%><br />
+</div>
+
+<div class="field">
+  <%= f.label "End-Time" %>
+  <%= f.time_field :end_time, required: true%><br />
+</div>

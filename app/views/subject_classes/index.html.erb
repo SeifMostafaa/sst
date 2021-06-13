@@ -56,6 +56,7 @@
             <td>
               <%= link_to 'Students', subject_class_students_path(subject_class_id: subject_class.id)%>
               <%= link_to 'Materials', subject_class_materials_path(subject_class_id: subject_class.id)%>
+              <%= link_to 'Time Tables', time_tables_path(subject_class_id: subject_class.id)%>
             </td>
           </tr>
         <% end %>
