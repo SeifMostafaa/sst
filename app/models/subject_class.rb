@@ -26,6 +26,7 @@ class SubjectClass < ApplicationRecord
 
   belongs_to :subject
   belongs_to :academic_year
+  has_many :time_tables
   has_many :subject_class_materials
   has_many :subject_class_teachers
   has_many :subject_class_students
