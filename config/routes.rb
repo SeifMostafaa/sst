@@ -35,6 +35,11 @@ Rails.application.routes.draw do
           get :by_subject_class
         end
       end
+      resources :time_tables do
+        collection do
+          get :by_student
+        end
+      end
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

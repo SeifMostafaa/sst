@@ -57,6 +57,7 @@ class User < ApplicationRecord
   has_many :subject_class_students
   has_many :subject_classes, through: :subject_class_teachers
   has_many :subject_classes, through: :subject_class_students
+  has_many :time_tables, through: :subject_classes
 
   validates :locale, presence: true
 
