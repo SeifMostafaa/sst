@@ -64,7 +64,8 @@ h1 {
 }
 
 .sidenav a:hover {
-  background-color: rgba(27, 68, 122, 0.08);
+  background-color: rgba(255, 94, 94, 0.08);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -86,8 +87,8 @@ h1 {
 }
 
 .sidenav .active {
-  color: var(--primary-color);
-  background-color: rgba(27, 68, 122, 0.08);
+  background-color: rgba(255, 94, 94, 0.08);
+  color: var(--secondary-color);
 }
 
 .one-liner {
