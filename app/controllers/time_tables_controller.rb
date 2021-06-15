@@ -1,5 +1,6 @@
 class TimeTablesController < ApplicationController
-  before_action :set_subject_class, only: %i[index new create edit update]
+  before_action :set_subject_class, only: %i[index new create]
+  before_action :set_time_table, only: %i[edit update destroy]
   def index
     @time_tables = @subject_class.time_tables
   end
@@ -25,14 +26,37 @@ class TimeTablesController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    respond_to do |format|
+      if @time_table.update(time_table_params)
+        format.html do
+          redirect_to time_tables_path(subject_class_id: @time_table.subject_class_id),
+                      notice: 'Time Table was successfully updated.'
+        end
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
 
-  def destroy; end
+  def destroy
+    @time_table.destroy
+    respond_to do |format|
+      format.html do
+        redirect_to time_tables_path(subject_class_id: @time_table.subject_class_id),
+                    notice: 'Class was successfully destroyed.'
+      end
+    end
+  end
 
   private
 
   def set_subject_class
     @subject_class = SubjectClass.find(params[:subject_class_id])
+  end
+
+  def set_time_table
+    @time_table = TimeTable.find(params[:id])
   end
 
   def time_table_params

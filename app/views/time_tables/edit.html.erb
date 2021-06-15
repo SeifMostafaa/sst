@@ -1,1 +1,17 @@
-<%# TO BE COMPLETED %>
+<button class="btn btn-back">          
+  <%= link_to time_tables_path(subject_class_id: @time_table.subject_class_id) do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<h2>Edit Time Table</h2>
+
+<%= form_for(@time_table, url: time_table_path(id: @time_table.id), method: :put) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Update Time Table" %>
+  </div>
+<% end %>
+
