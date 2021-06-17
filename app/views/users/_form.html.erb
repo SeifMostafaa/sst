@@ -1,17 +1,103 @@
-<%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="container grid">
+  <div class="form-group label">Arabic Full Name</div>
+  <div class="item"><%= f.text_field :full_name_ar, class: "item", placeholder: "Arabic Full Name"%></div>
+</div>
 
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+<br>
+
+<div class="container grid">
+  <div class="form-group label">English Full Name</div>
+  <div class="item"><%= f.text_field :full_name_en, class: "item", placeholder: "English Full Name"%></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Account Type</div>
+  <div class="item"><%= f.select :role, collection: User.roles.keys %></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Username</div>
+  <div class="item"><%= f.text_field :username, class: "item", placeholder: "Username"%></div>
+</div>
+
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Email</div>
+  <div class="item"><%= f.text_field :email, class: "item", placeholder: "Email"%></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Phone Number</div>
+  <div class="item"><%= f.text_field :phone, class: "item", placeholder: "Phone Number"%></div>
+</div>
+
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">National ID</div>
+  <div class="item"><%= f.text_field :national_id, class: "item", placeholder: "National ID"%></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Address In Arabic</div>
+  <div class="item"><%= f.text_field :address_ar, class: "item", placeholder: "Address in Arabic"%></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Address in English</div>
+  <div class="item"><%= f.text_field :address_en, class: "item", placeholder: "Address in English"%></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label"><%= f.label :password, "Password" %></div>
+  <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em><br />
   <% end %>
+  <div class="item"><%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "item", placeholder: "Password" %></div>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<br>
+
+<div class="container grid">
+  <div class="form-group label"><%= f.label :password_confirmation, "Confirm Password" %></div>
+  <div class="item"><%= f.password_field :password_confirmation, autocomplete: "new-password", class: "item", placeholder: "Confirm Password" %></div>
+</div>
+
+<br>
+
+
+<div class="container grid">
+  <div class="form-group label">Date of Birth</div>
+  <div class="item"><%= f.date_field :date_of_birth %></div>
+</div>
+
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Gender</div>
+  <div class="item"><%= f.select :gender, collection: User.genders.keys %></div>
+</div>
+
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Religion</div>
+  <div class="item"><%= f.select :religion, collection: User.religions.keys %></div>
+</div>
+
