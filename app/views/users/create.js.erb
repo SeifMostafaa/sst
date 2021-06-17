@@ -1,0 +1,22 @@
+<%- if @response[:successful]%>
+  window.location = "<%= @response[:redirect_url]%>"
+<%- else%>
+  $("input").each(function() {
+    $(this).closest(".container").removeClass("error");
+    $(this).next(".help-block").remove();
+  });
+
+  $("select").each(function() {
+    $(this).closest(".container").removeClass("error");
+    $(this).next(".help-block").remove();
+  });
+  <%- @response[:errors].each do |key, value|%>
+    if ($("input#user_<%= key.to_s%>").length > 0) {
+      $("input#user_<%= key.to_s%>").closest(".container").addClass("error");
+      $("input#user_<%= key.to_s%>").after("<span class='help-block' style='color:red;'><%= value%></span>");
+    } else if ($("select#user_<%= key.to_s%>").length > 0) {
+      $("select#user_<%= key.to_s%>").closest(".container").addClass("error");
+      $("select#user_<%= key.to_s%>").after("<span class='help-block' style='color:red;'><%= value%></span>");
+    }
+  <%end%>
+<%end%>

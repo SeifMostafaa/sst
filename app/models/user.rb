@@ -50,7 +50,7 @@ class User < ApplicationRecord
   enum gender: %i[female male]
   enum locale: %i[ar en]
   enum religion: %i[christian muslim]
-  enum role: %i[admin engineer parents staff student teacher]
+  enum role: %i[admin engineer parents staff student teacher applicant]
   enum status: %i[active graduated inactive suspended]
 
   has_many :subject_class_teachers
@@ -60,6 +60,20 @@ class User < ApplicationRecord
   has_many :time_tables, through: :subject_classes
 
   validates :locale, presence: true
+
+  after_initialize :set_city, :set_locale, :set_status
+
+  def set_city
+    self.city ||= :alexandria
+  end
+
+  def set_locale
+    self.locale ||= :ar
+  end
+
+  def set_status
+    self.status ||= :active
+  end
 
   def generate_jwt
     JWT.encode({ id: id,
