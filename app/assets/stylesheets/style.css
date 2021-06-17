@@ -156,7 +156,7 @@ label[for='show'] {
   color: grey !important;
 }
 
-.new-fields{
+.new-fields {
   border: 2px solid rgb(199, 197, 197);
   border-radius: 5px;
   display: inline-block;
@@ -182,6 +182,12 @@ label[for='show'] {
   border: 1px solid #ccc;
 }
 
-.btn-apply{
-  background-color: #1b447a;
+.btn-apply {
+  background-color: rgba(255, 94, 94, 0.08);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: rgba(255, 94, 94, 0.08) !important;
+  color: var(--secondary-color) !important;
 }
