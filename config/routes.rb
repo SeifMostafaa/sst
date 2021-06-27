@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :subject_class_students
     resources :subject_class_materials
     resources :time_tables
+    resources :announcements
     apipie
   end
   devise_scope :user do
