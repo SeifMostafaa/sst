@@ -1,0 +1,34 @@
+<div class="field">
+  <%= f.label "Arabic Title" %>
+  <%= f.text_field :title_ar, autofocus: true, autocomplete: "name-en" %><br />
+</div>
+
+<div class="field">
+  <%= f.label "English Title" %>
+  <%= f.text_field :title_en, autocomplete: "name-ar", required: true %><br />
+</div>
+
+<div class="field">
+  <%= f.label "Arabic Description" %>
+  <%= f.text_area :description_ar, autofocus: true, autocomplete: "description-en" %><br />
+</div>
+
+<div class="field">
+  <%= f.label "English Description" %>
+  <%= f.text_area :description_en, autocomplete: "description-ar", required: true%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Announcement Type" %>
+  <%= f.select :announcement_type, collection: Announcement.announcement_types.keys%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Users Type" %>
+  <%= f.select :user_type, collection: Announcement.user_types.keys%><br />
+</div>
+
+<div class="field">
+  <%= f.label "Attachment" %>
+  <%= f.file_field :attachment%><br />
+</div>
