@@ -1,4 +1,6 @@
 class AnnouncementsController < ApplicationController
+  before_action :set_announcement, only: %i[show edit update destroy]
+
   def index
     @announcements = Announcement.all
   end
@@ -28,6 +30,10 @@ class AnnouncementsController < ApplicationController
   def destroy; end
 
   private
+
+  def set_announcement
+    @announcement = Announcement.find(params[:id])
+  end
 
   def announcement_params
     params.require(:announcement).permit(
