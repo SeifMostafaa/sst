@@ -1,0 +1,17 @@
+<button class="btn btn-back">          
+  <%= link_to announcements_path do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<h2>Edit Announcement</h2>
+
+<%= form_for(@announcement, url: announcement_path, method: :put) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Update Announcement" %>
+  </div>
+<% end %>
+

@@ -25,7 +25,15 @@ class AnnouncementsController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    respond_to do |format|
+      if @announcement.update(announcement_params)
+        format.html { redirect_to announcements_path, notice: 'Announcement was successfully updated.' }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
 
   def destroy; end
 
