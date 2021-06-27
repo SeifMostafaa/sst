@@ -35,7 +35,12 @@ class AnnouncementsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @announcement.destroy
+    respond_to do |format|
+      format.html { redirect_to announcements_path, notice: 'Announcement was successfully destroyed.' }
+    end
+  end
 
   private
 
