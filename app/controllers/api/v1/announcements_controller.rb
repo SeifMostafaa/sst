@@ -12,7 +12,8 @@ class Api::V1::AnnouncementsController < ApplicationController
     property :description_ar, String, desc: "Announcement's arabic description"
     property :description_en, String, desc: "Announcement's english description"
     property :announcement_type, %w[event news notice], desc: 'Announcement type'
-    property :file, String, desc: "Announcement attachment's link"
+    property :attachment, String, desc: "Announcement attachment's link"
+    property :attachment_type, String, desc: "Announcement attachment's type"
   end
   def by_student
     @announcements = Announcement.where(user_type: %i[generic parents student])
