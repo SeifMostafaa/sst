@@ -5,6 +5,7 @@ class SessionsController < Devise::SessionsController
   api :POST, 'api/v1/users/login', 'User login'
   param :email, String, desc: 'User email'
   param :password, String, desc: 'User password'
+  param :fcm_token, String, desc: 'User FCM Token'
   returns code: 422 do
     property :errors, Hash, desc: 'Email or password is invalid'
   end
@@ -34,9 +35,16 @@ class SessionsController < Devise::SessionsController
   def create
     user = User.find_by_email(params[:email])
     if user && user.valid_password?(params[:password])
+      update_fcm_token(user) unless params[:fcm_token].blank?
       @current_user = user
     else
       render json: { errors: { 'email or password' => ['is invalid'] } }, status: :unprocessable_entity
+    end
+  end
+
+  helpers do
+    def update_fcm_token(user)
+      user.update(fcm_token: params[:fcm_token])
     end
   end
 end

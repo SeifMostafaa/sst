@@ -12,6 +12,7 @@
 #  deleted_at             :datetime
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
+#  fcm_token              :text
 #  full_name_ar           :string
 #  full_name_en           :string
 #  gender                 :integer
