@@ -14,12 +14,12 @@
 #  parent_full_name       :string
 #  parent_occupation      :string
 #  parent_phone           :string
-#  previous_school        :string
+#  preparatory_school     :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  major_first_choice_id  :bigint           not null
 #  major_second_choice_id :bigint           not null
-#  national_id            :integer
+#  national_id            :bigint
 #
 # Indexes
 #
@@ -33,8 +33,8 @@
 #  fk_rails_...  (major_second_choice_id => majors.id)
 #
 class Applicant < ApplicationRecord
-  belongs_to :major_first_choice_id, class_name: 'Major'
-  belongs_to :major_second_choice_id, class_name: 'Major'
+  belongs_to :major_first_choice, class_name: 'Major', foreign_key: 'major_first_choice_id'
+  belongs_to :major_second_choice, class_name: 'Major', foreign_key: 'major_second_choice_id'
 
   enum gender: %i[female male]
 end
