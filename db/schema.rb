@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_04_145447) do
+ActiveRecord::Schema.define(version: 2021_07_05_182705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2021_07_04_145447) do
     t.string "full_name"
     t.decimal "grade"
     t.date "date_of_birth"
-    t.integer "national_id"
+    t.bigint "national_id"
     t.string "address"
     t.string "parent_full_name"
     t.string "parent_occupation"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2021_07_04_145447) do
     t.bigint "major_second_choice_id", null: false
     t.datetime "deleted_at"
     t.integer "gender"
-    t.string "previous_school"
+    t.string "preparatory_school"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deleted_at"], name: "index_applicants_on_deleted_at"

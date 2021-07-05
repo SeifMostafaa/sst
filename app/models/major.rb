@@ -25,8 +25,6 @@ class Major < ApplicationRecord
 
   has_many :subjects
   has_many :users, through: :subjects
-  has_many :applicants_first_choices, class_name: 'Applicant', foreign_key: 'major_first_choice_id'
-  has_many :applicants_second_choices, class_name: 'Applicant', foreign_key: 'major_second_choice_id'
 
   def set_status
     self.status ||= :active
