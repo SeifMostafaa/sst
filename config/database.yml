@@ -84,9 +84,5 @@ staging:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  database: <%= ENV['RDS_DB_NAME'] %>
-  adapter: <%= ENV['RDS_ADAPTER'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
