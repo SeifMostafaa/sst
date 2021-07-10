@@ -2,6 +2,14 @@ class Api::V1::ApplicantsController < ApplicationController
   skip_before_action :authenticate_user?
 
   api :POST, 'api/v1/applicants', 'Create Applicant'
+  param :recaptcha_response, Hash do
+    param :success, :boolean, desc: 'whether this request was a valid reCAPTCHA token'
+    param :score, :decimal, desc: 'the score for this request (0.0 - 1.0)'
+    param :action, String, desc: 'the action name for this request (important to verify)'
+    param :challenge_ts, DateTime, desc: "the timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)"
+    param :hostname, String, desc: 'the hostname of the site where the reCAPTCHA was solved'
+    param 'error-codes', Array, of: String, desc: 'optional'
+  end
   param :address, String, desc: 'Applicant Address'
   param :date_of_birth, Date, desc: 'Applicant Date of Birth'
   param :emergency_phone, String, desc: 'Applicant Emergency Phone Number'
@@ -23,18 +31,23 @@ class Api::V1::ApplicantsController < ApplicationController
     property :message, String
   end
   def create
-    applicant = Applicant.new(applicant_params)
+    recaptcha_result = RecaptchaVerificationService.call(params[:recaptcha_response], request.remote_ip)
     respond_to do |format|
-      if applicant.save
-        format.json do
-          render json: { "message": 'Applicant Created Successfully!' },
-                 status: 201
+      if recaptcha_result.success?
+        applicant = Applicant.new(applicant_params)
+        if applicant.save
+          format.json do
+            render json: { "message": 'Applicant Created Successfully!' },
+                   status: 201
+          end
+        else
+          format.json do
+            render json: { "error": 'Applicant has not been created!' },
+                   status: 400
+          end
         end
       else
-        format.json do
-          render json: { "error": 'Applicant has not been created!' },
-                 status: 400
-        end
+        format.json { render json: recaptcha_result.response, status: 400 }
       end
     end
   end
