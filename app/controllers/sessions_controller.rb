@@ -42,9 +42,9 @@ class SessionsController < Devise::SessionsController
     end
   end
 
-  helpers do
-    def update_fcm_token(user)
-      user.update(fcm_token: params[:fcm_token])
-    end
+  private
+
+  def update_fcm_token(user)
+    user.update(fcm_token: params[:fcm_token])
   end
 end
