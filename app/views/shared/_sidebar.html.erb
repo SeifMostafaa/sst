@@ -24,10 +24,69 @@
             <% end %>
             <% if can? :manage, :majors %>
                 <li>
-                    <a href="/majors"><i class="fas fa-newspaper"></i> <%= t(:majors) %></a>
+                    <a href="#"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
                 </li>
-            <% end %>
-            <% if can? :manage, :announcements %>
+                <li class="active">
+                    <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> Accounts</a>
+                    <ul class="collapse list-unstyled" id="accSubmenu">
+                        <li>
+                            <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
+                        </li>
+                        <li>
+                            <%= link_to(' Student Accounts', users_path, method: :get, class: "dropdown-item") %>
+                        </li>
+                        <li>
+                            <a href="#">Option 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-users" aria-hidden="true"></i> Classes</a>
+                    <ul class="collapse list-unstyled" id="classSubmenu">
+                        <li>
+                            <a href="#">Option 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Option 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Option 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#courseSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-book-reader"></i> Courses</a>
+                    <ul class="collapse list-unstyled" id="courseSubmenu">
+                        <li>
+                            <a href="#">Option 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Option 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Option 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-newspaper"></i> Notice & News</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-calendar-alt"></i> Events</a>
+                </li>
+                <hr>
+                <li>
+                  <a href="#"><i class="fas fa-users-cog"></i> Account Roles</a>
+                </li>
+                <li>
+                    <div>
+                      <%= link_to(' Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">عربي</a>
+                </li>
+            </ul>
             <li>
                 <a href="/announcements"><i class="fas fa-calendar-alt"></i> <%= t(:announcements) %></a>
             </li>
