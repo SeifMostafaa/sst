@@ -144,7 +144,7 @@ label[for='show'] {
   color: grey !important;
 }
 
-.new-fields {
+.new-fields{
   border: 2px solid rgb(199, 197, 197);
   border-radius: 5px;
   display: inline-block;
