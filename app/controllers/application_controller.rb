@@ -2,9 +2,11 @@ class ApplicationController < ActionController::Base
   around_action :switch_locale
 
   include ActiveStorage::SetCurrent
+  include Pagy::Backend
   protect_from_forgery unless: -> { request.format.json? }
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user?, if: -> { request.format.json? }
+
 
   private
 
