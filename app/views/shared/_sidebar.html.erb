@@ -24,7 +24,7 @@
             <% end %>
             <% if can? :manage, :majors %>
                 <li>
-                    <a href="#"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                    <a href="#"><i class="fas fa-chart-pie"></i> Dashboard</a>
                 </li>
                 <li class="active">
                     <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> Accounts</a>
@@ -33,10 +33,16 @@
                             <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Student Accounts', users_path, method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Staff Accounts', users_path(role: User.roles["staff"]), method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <a href="#">Option 3</a>
+                            <%= link_to(' Teacher Accounts', users_path(role: User.roles["teacher"]), method: :get, class: "dropdown-item") %>
+                        </li>
+                        <li>
+                            <%= link_to(' Student Accounts', users_path(role: User.roles["student"]), method: :get, class: "dropdown-item") %>
+                        </li>
+                        <li>
+                            <%= link_to(' Parent Accounts', users_path(role: User.roles["parent"]), method: :get, class: "dropdown-item") %>
                         </li>
                     </ul>
                 </li>

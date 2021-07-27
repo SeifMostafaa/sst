@@ -14,7 +14,7 @@
 
 <div class="container grid">
   <div class="form-group label">Account Type</div>
-  <div class="item"><%= f.select :role, collection: User.roles.keys %></div>
+  <div class="item"><%= f.select(:role, User.roles.keys, {}, {:class => "item" })%></div>
 </div>
 
 <br>
@@ -83,7 +83,7 @@
 
 <div class="container grid">
   <div class="form-group label">Date of Birth</div>
-  <div class="item"><%= f.date_field :date_of_birth %></div>
+  <div class="item"><%= f.date_field :date_of_birth, min: "1990-01-01", max: "2029-12-31", class: 'item' %> </div>
 </div>
 
 
@@ -91,13 +91,13 @@
 
 <div class="container grid">
   <div class="form-group label">Gender</div>
-  <div class="item"><%= f.select :gender, collection: User.genders.keys %></div>
+  <div class="item"><%= f.select(:gender, User.genders.keys, {}, {:class => "item" })%></div>
 </div>
 
 <br>
 
 <div class="container grid">
   <div class="form-group label">Religion</div>
-  <div class="item"><%= f.select :religion, collection: User.religions.keys %></div>
+  <div class="item"><%= f.select(:religion, User.religions.keys, {}, {:class => "item" })%></div>
 </div>
 

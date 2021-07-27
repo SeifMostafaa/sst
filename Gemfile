@@ -43,6 +43,7 @@ gem 'httparty', '~> 0.18.1'
 gem 'rails-i18n'
 
 gem 'cancancan'
+gem 'pagy', '~> 4.10', '>= 4.10.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

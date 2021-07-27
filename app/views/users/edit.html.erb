@@ -1,6 +1,12 @@
 <h1>Editing User</h1>
 
-<%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= form_for(@user, url: user_path, method: :put) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit "Update Major" %>
+  </div>
+<% end %>
+
