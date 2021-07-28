@@ -1,19 +1,27 @@
-<div class="field">
-  <%= f.label "Day" %>
-  <%= f.select :day, collection: TimeTable.days.keys%><br />
+<div class="container grid">
+  <div class="form-group label">Day</div>
+  <div class="item"><%= f.select(:day, TimeTable.days.keys, {}, {:class => "item" })%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Period" %>
-  <%= f.text_field :period, required: true%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">Period</div>
+  <div class="item"><%= f.text_field :period,  class: "item", required: true%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Start-Time" %>
-  <%= f.time_field :start_time, required: true%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">Start-Time</div>
+  <div class="item"><%= f.time_field :start_time,  class: "item", required: true%></div>
 </div>
 
-<div class="field">
-  <%= f.label "End-Time" %>
-  <%= f.time_field :end_time, required: true%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">End-Time</div>
+  <div class="item"><%= f.time_field :end_time,  class: "item", required: true%></div>
 </div>
+
+<br/>

@@ -1,6 +1,10 @@
-<div class="field">
-  <%= f.label "Teacher" %>
-  <%= f.collection_select :user_id, @teachers, :id, :full_name_en%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">Teacher</div>
+  <div class="item"><%= f.collection_select :user_id, @teachers, :id, :full_name_en, {}, {class: "item"}%></div>
 </div>
+
+<br/>
 
 <%= f.hidden_field :subject_class_id %>

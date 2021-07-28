@@ -1,16 +1,24 @@
 <%= f.hidden_field :subject_class_id %>
 
-<div class="field">
-  <%= f.label "Material Name (Arabic)" %>
-  <%= f.text_field :name_ar, required: true%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">Material Name (Arabic)</div>
+  <div class="item"><%= f.text_field :name_ar, required: true%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Material Name (English)" %>
-  <%= f.text_field :name_en%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">Material Name (English)</div>
+  <div class="item"><%= f.text_field :name_en%></div>
 </div>
 
-<div class="field">
-  <%= f.label "File" %>
-  <%= f.file_field :file, required: true%><br />
+<br/>
+
+<div class="container grid">
+  <div class="form-group label">File</div>
+  <%= f.file_field :file, required: true%>
 </div>
+
+<br/>

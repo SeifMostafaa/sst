@@ -4,14 +4,20 @@
   <% end %>
 </button>
 
-<h2>New Class</h2>
+<div class="row justify-content-md-center">
+    <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
 
-<%= form_for(@subject_class, url: subject_classes_path(subject_id: @subject.id), method: :post) do |f| %>
+    <h2>New Class</h2>
+    <br/>
 
-  <%= render partial: "form", locals: { f: f } %>
+    <%= form_for(@subject_class, url: subject_classes_path(subject_id: @subject.id), method: :post) do |f| %>
 
-  <div class="actions">
-    <%= f.submit "Create Class" %>
+      <%= render partial: "form", locals: { f: f } %>
+      <br/>
+  <div class="form-group text-center">
+    <%= f.submit "Create Class" , class: "btn btn-primary" %>
   </div>
 <% end %>
 
+  </div>
+</div>

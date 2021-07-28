@@ -4,14 +4,22 @@
   <% end %>
 </button>
 
-<h2>New Material</h2>
 
-<%= form_for(@subject_class_material, url: subject_class_materials_path, method: :post) do |f| %>
 
-  <%= render partial: "form", locals: { f: f } %>
+<div class="row justify-content-md-center">
+    <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
 
-  <div class="actions">
-    <%= f.submit "Create Material" %>
+    <h1>New Material</h1>
+
+    <%= form_for(@subject_class_material, url: subject_class_materials_path, method: :post) do |f| %>
+
+    <%= render partial: "form", locals: { f: f } %>
+
+  <br/>
+  <div class="form-group text-center">
+    <%= f.submit "Create Material", class: "btn btn-primary" %>
   </div>
-<% end %>
+   <% end %>
+  </div>
+</div>
 
