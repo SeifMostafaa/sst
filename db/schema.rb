@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_05_182705) do
+ActiveRecord::Schema.define(version: 2021_07_31_160047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2021_07_05_182705) do
     t.string "preparatory_school"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "registered"
     t.index ["deleted_at"], name: "index_applicants_on_deleted_at"
     t.index ["major_first_choice_id"], name: "index_applicants_on_major_first_choice_id"
     t.index ["major_second_choice_id"], name: "index_applicants_on_major_second_choice_id"
