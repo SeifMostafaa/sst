@@ -25,6 +25,7 @@ class Major < ApplicationRecord
 
   has_many :subjects
   has_many :users, through: :subjects
+  has_many :student_majors
 
   def set_status
     self.status ||= :active
