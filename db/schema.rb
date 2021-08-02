@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_31_160047) do
+ActiveRecord::Schema.define(version: 2021_08_01_230641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,15 @@ ActiveRecord::Schema.define(version: 2021_07_31_160047) do
     t.index ["deleted_at"], name: "index_applicants_on_deleted_at"
     t.index ["major_first_choice_id"], name: "index_applicants_on_major_first_choice_id"
     t.index ["major_second_choice_id"], name: "index_applicants_on_major_second_choice_id"
+  end
+
+  create_table "attendances", force: :cascade do |t|
+    t.bigint "subject_class_student_id", null: false
+    t.boolean "presence"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_class_student_id"], name: "index_attendances_on_subject_class_student_id"
   end
 
   create_table "majors", force: :cascade do |t|
@@ -216,6 +225,7 @@ ActiveRecord::Schema.define(version: 2021_07_31_160047) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "applicants", "majors", column: "major_first_choice_id"
   add_foreign_key "applicants", "majors", column: "major_second_choice_id"
+  add_foreign_key "attendances", "subject_class_students"
   add_foreign_key "subject_class_materials", "subject_classes"
   add_foreign_key "subject_class_students", "subject_classes"
   add_foreign_key "subject_class_students", "users"

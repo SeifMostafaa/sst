@@ -25,4 +25,5 @@ class SubjectClassStudent < ApplicationRecord
 
   belongs_to :subject_class
   belongs_to :user
+  has_many :attendances
 end
