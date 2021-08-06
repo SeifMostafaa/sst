@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  around_action :switch_locale
+
   include ActiveStorage::SetCurrent
   protect_from_forgery unless: -> { request.format.json? }
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -20,5 +22,10 @@ class ApplicationController < ActionController::Base
       head :unauthorized
       body
     end
+  end
+
+  def switch_locale(&action)
+    locale = params[:locale] || I18n.default_locale
+    I18n.with_locale(locale, &action)
   end
 end
