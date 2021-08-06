@@ -3,23 +3,23 @@
 <div class="row justify-content-md-center">
   <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
     <div class="one-liner">
-      <h1>Applicants</h1>
+      <h1><%= t(:applicants) %></h1>
     </div>
     <br/>
 
     <table class="table table-striped">
       <thead>
         <tr class="label">
-        <th class="col-1">#</th>
-          <th class="col-3">Full Name</th>
-          <th class="col-1">Preparatoty School</th>
-          <th class="col-1">Grade</th>
-          <th class="col-2">Parent Phone Number</th>
-          <th class="col-2">Major First Choice</th>
-          <th class="col-2">Major Second Choice</th>
-          <th class="col-3">Notes</th>
-          <th class="col-1">Registration Status</th>
-          <th class="col-3"></th>
+          <th class="col-1">#</th>
+          <th class="col-1"><%= t(:registration_date) %></th>
+          <th class="col-2"><%= t(:full_name) %></th>
+          <th class="col-1"><%= t(:preparatory_school) %></th>
+          <th class="col-1"><%= t(:grade) %></th>
+          <th class="col-2"><%= t(:parent_phone_number) %></th>
+          <th class="col-2"><%= t(:major_first_choice) %></th>
+          <th class="col-2"><%= t(:major_second_choice) %></th>
+          <th class="col-3"><%= t(:notes) %></th>
+          <th class="col-1"><%= t(:registration_status) %></th>
         </tr>
       </thead>
 
@@ -27,16 +27,15 @@
         <% @applicants.each do |applicant| %>
           <tr>
             <td><%= applicant.id %></td>
+            <td><%= applicant.created_at.strftime('%d/%m/%Y') %></td>
             <td><%= applicant.full_name %></td>
             <td><%= applicant.preparatory_school %></td>
             <td><%= applicant.grade %></td>
             <td><%= applicant.parent_phone %></td>
-            <td><%= applicant.major_first_choice.name_en %></td>
-            <td><%= applicant.major_second_choice.name_en %></td>
+            <td><%= I18n.locale == :en ? applicant.major_first_choice.name_en : applicant.major_first_choice.name_ar %></td>
+            <td><%= I18n.locale == :en ? applicant.major_second_choice.name_en : applicant.major_second_choice.name_ar %></td>
             <td><%= applicant.notes %></td>
-            <td><%= applicant.registered? ? '✔️' : '❌'%></td>
-            <td>                                 
-            </td>
+            <td><%= applicant.registered? ? t(:registered) : t(:not_registered)%></td>
           </tr>
         <% end %>
       </tbody>

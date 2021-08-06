@@ -10,9 +10,9 @@ module Sst
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-
-    # Configuration for the application, engines, and railties goes here.
-    #
+    I18n.load_path += Dir["#{config.root}/app/assets/config/locales/*.yml"]
+    I18n.available_locales = %i[en ar]
+    I18n.default_locale = :ar
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
