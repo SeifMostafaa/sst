@@ -8,27 +8,35 @@
             <li>
                 <a href="#"><i class="fas fa-chart-pie"></i> <%= t(:dashboard) %></a>
             </li>
-            <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
-            <ul class="collapse list-unstyled" id="accSubmenu">
+            <% if can? :manage, :users %>
+                <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
+                <ul class="collapse list-unstyled" id="accSubmenu">
+                    <li>
+                        <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
+                    </li>
+                    <li>
+                        <a href="#">Option 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Option 3</a>
+                    </li>
+                </ul>
+            <% end %>
+            <% if can? :manage, :majors %>
                 <li>
-                    <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
+                    <a href="/majors"><i class="fas fa-newspaper"></i> <%= t(:majors) %></a>
                 </li>
-                <li>
-                    <a href="#">Option 2</a>
-                </li>
-                <li>
-                    <a href="#">Option 3</a>
-                </li>
-            </ul>
-            <li>
-                <a href="/majors"><i class="fas fa-newspaper"></i> <%= t(:majors) %></a>
-            </li>
+            <% end %>
+            <% if can? :manage, :announcements %>
             <li>
                 <a href="/announcements"><i class="fas fa-calendar-alt"></i> <%= t(:announcements) %></a>
             </li>
+            <% end %>
+            <% if can? :manage, :applicants %>
             <li>
                 <a href="/applicants"><i class="fas fa-calendar-alt"></i> <%= t(:applicants) %></a>
             </li>
+            <% end %>
             <hr>
             <li>
                 <div>
