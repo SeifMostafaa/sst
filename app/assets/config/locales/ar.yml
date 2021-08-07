@@ -17,4 +17,8 @@ ar:
   registration_status: 'حالة التسجيل'
   registered: 'تم التسجيل'
   not_registered: 'لم يسجل'
+  contact_status: 'حالة التواصل'
+  contacted: 'تم التواصل'
+  not_contacted: 'لم يتم التواصل'
+  school_notes: 'ملاحظات المدرسة'
   hello: 'مرحبا،'

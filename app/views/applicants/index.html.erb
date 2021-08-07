@@ -18,8 +18,10 @@
           <th class="col-2"><%= t(:parent_phone_number) %></th>
           <th class="col-2"><%= t(:major_first_choice) %></th>
           <th class="col-2"><%= t(:major_second_choice) %></th>
-          <th class="col-3"><%= t(:notes) %></th>
+          <th class="col-1"><%= t(:notes) %></th>
           <th class="col-1"><%= t(:registration_status) %></th>
+          <th class="col-1"><%= t(:contact_status) %></th>
+          <th class="col-1"><%= t(:school_notes) %></th>
         </tr>
       </thead>
 
@@ -36,6 +38,8 @@
             <td><%= I18n.locale == :en ? applicant.major_second_choice.name_en : applicant.major_second_choice.name_ar %></td>
             <td><%= applicant.notes %></td>
             <td><%= applicant.registered? ? t(:registered) : t(:not_registered)%></td>
+            <td><%= applicant.contacted? ? t(:contacted) : t(:not_contacted)%></td>
+            <td><%= applicant.school_notes %></td>
           </tr>
         <% end %>
       </tbody>

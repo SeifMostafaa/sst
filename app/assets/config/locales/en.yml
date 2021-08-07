@@ -17,4 +17,8 @@ en:
   registration_status: 'Registration Status'
   registered: 'Registered'
   not_registered: 'Not Registered'
+  contact_status: 'Contact Status'
+  contacted: 'Contacted'
+  not_contacted: 'Not Contacted'
+  school_notes: 'School Notes'
   hello: 'Hello,'
