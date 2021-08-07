@@ -15,7 +15,7 @@
           <th class="col-2"><%= t(:full_name) %></th>
           <th class="col-1"><%= t(:preparatory_school) %></th>
           <th class="col-1"><%= t(:grade) %></th>
-          <th class="col-2"><%= t(:parent_phone_number) %></th>
+          <th class="col-2"><%= t(:parent_phone) %></th>
           <th class="col-2"><%= t(:major_first_choice) %></th>
           <th class="col-2"><%= t(:major_second_choice) %></th>
           <th class="col-1"><%= t(:notes) %></th>
@@ -40,6 +40,13 @@
             <td><%= applicant.registered? ? t(:registered) : t(:not_registered)%></td>
             <td><%= applicant.contacted? ? t(:contacted) : t(:not_contacted)%></td>
             <td><%= applicant.school_notes %></td>
+            <td>
+              <button>                
+                <%= link_to edit_applicant_path(applicant) do %>
+                  <i class="fas fa-pencil-alt"></i>
+                <% end %>
+              </button>
+            </td>
           </tr>
         <% end %>
       </tbody>
