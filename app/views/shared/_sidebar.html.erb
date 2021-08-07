@@ -9,8 +9,8 @@
                 <a href="#"><i class="fas fa-chart-pie"></i> <%= t(:dashboard) %></a>
             </li>
             <% if can? :manage, :users %>
-                <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
-                <ul class="collapse list-unstyled" id="accSubmenu">
+                <a href="#accSubmenuar" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
+                <ul class="collapse list-unstyled" id="accSubmenuar">
                     <li>
                         <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
                     </li>
