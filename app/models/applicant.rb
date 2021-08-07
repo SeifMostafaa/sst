@@ -4,6 +4,7 @@
 #
 #  id                     :bigint           not null, primary key
 #  address                :string
+#  contacted              :boolean          default(FALSE)
 #  date_of_birth          :date
 #  deleted_at             :datetime
 #  emergency_phone        :string
@@ -16,6 +17,7 @@
 #  parent_phone           :string
 #  preparatory_school     :string
 #  registered             :boolean
+#  school_notes           :text
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  major_first_choice_id  :bigint           not null

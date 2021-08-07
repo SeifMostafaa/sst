@@ -1,0 +1,21 @@
+<button class="btn btn-back">          
+  <%= link_to applicants_path do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+</button>
+
+<br>
+<br>
+
+<h2>Edit Applicant</h2>
+
+<%= form_for(@applicant, url: applicant_path, method: :put) do |f| %>
+
+  <%= render partial: "form", locals: { f: f } %>
+
+  <div class="actions" align="right">
+    <%= f.submit t(:update), class:"update-btn" %>
+  </div>
+<% end %>
+
+
