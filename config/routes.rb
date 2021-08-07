@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     resources :time_tables
     resources :announcements
     resources :applicants
-    resources :academic_years
     apipie
   end
   devise_scope :user do
