@@ -1,24 +1,32 @@
-<div class="field">
-  <%= f.label "English Name" %>
-  <%= f.text_field :name_en, autofocus: true, autocomplete: "name-en" %><br />
+<div class="container grid">
+  <div class="form-group label">English Name</div>
+  <div class="item"><%= f.text_field :name_en, class: "item", placeholder: "English Name"%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Arabic Name" %>
-  <%= f.text_field :name_ar, autocomplete: "name-ar", required: true %><br />
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Arabic Name</div>
+  <div class="item"><%= f.text_field :name_ar, class: "item", placeholder: "Arabic Name"%></div>
 </div>
 
-<div class="field">
-  <%= f.label "English Description" %>
-  <%= f.text_area :description_en, autofocus: true, autocomplete: "description-en" %><br />
+<br>
+
+<div class="container grid">
+  <div class="form-group label">English Description</div>
+  <div class="item"><%= f.text_area :description_en, autofocus: true, autocomplete: "description-en", size: "50x5" %></div>
 </div>
 
-<div class="field">
-  <%= f.label "Arabic Description" %>
-  <%= f.text_area :description_ar, autocomplete: "description-ar", required: true%><br />
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Arabic Description</div>
+  <div class="item"><%= f.text_area :description_ar, autocomplete: "description-ar", required: true, size: "50x5"%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Semester" %>
-  <%= f.select :semester, collection: Subject.semesters.keys%><br />
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Semester</div>
+  <div class="item"><%= f.select(:semester, Subject.semesters.keys, {}, {:class => "item" })%></div>
 </div>
