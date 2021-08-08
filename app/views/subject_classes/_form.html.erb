@@ -1,9 +1,13 @@
-<div class="field">
-  <%= f.label "Academic Year" %>
-  <%= f.collection_select :academic_year_id, AcademicYear.all.order(year: :desc), :id, :year%><br />
+
+<div class="container grid">
+  <div class="form-group label">Academic Year</div>
+  <div class="item"><%= f.collection_select :academic_year_id, AcademicYear.all.order(year: :desc), :id, :year, {}, {class: "item"}%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Class Number" %>
-  <%= f.text_field :number, required: true%><br />
+<br>
+
+<div class="container grid">
+  <div class="form-group label">Class Number</div>
+  <div class="item"><%= f.text_field :number, class: "item", placeholder: "Number"%></div>
 </div>
+
