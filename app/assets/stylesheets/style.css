@@ -191,3 +191,42 @@ label[for='show'] {
   background-color: rgba(255, 94, 94, 0.08) !important;
   color: var(--secondary-color) !important;
 }
+
+#applicant_full_name,
+#applicant_address,
+#applicant_date_of_birth,
+#applicant_gender,
+#applicant_preparatory_school,
+#applicant_parent_full_name,
+#applicant_parent_occupation,
+#applicant_parent_phone,
+#applicant_emergency_phone,
+#applicant_national_id,
+#applicant_notes,
+#applicant_school_notes,
+#applicant_contacted,
+#applicant_registered {
+  border-radius: 5px;
+  width: 500px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: rgb(31, 71, 118);
+  font-weight: bold;
+}
+
+.divider {
+  margin-top: 10px !important;
+  border-top: 3px solid #bbb;
+}
+
+.update-btn {
+  border-radius: 5px;
+  background-color: rgb(1, 144, 178);
+  color: white;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-width: 0px;
+  margin-right: 14px;
+}
