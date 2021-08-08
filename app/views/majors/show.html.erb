@@ -1,10 +1,10 @@
 <div class="row justify-content-start">
   <div class="one-liner">
+  <%= link_to majors_path do %>
     <button class="btn btn-back">          
-      <%= link_to majors_path do %>
         <i class="fas fa-arrow-left"></i>
-      <% end %>
-    </button>
+        </button>
+  <% end %>
     <button class="btn btn-edit">          
       <%= link_to edit_major_path(@major) do %>
         <i class="fas fa-pencil-alt" style="color=white"></i>
