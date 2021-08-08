@@ -1,11 +1,11 @@
 <div class="row justify-content-start">
-  <div class="one-liner">
+  <div class="one-liner wide">
   <%= link_to majors_path do %>
-    <button class="btn btn-back">          
+    <button class="btn btn-back">
         <i class="fas fa-arrow-left"></i>
         </button>
   <% end %>
-    <button class="btn btn-edit">          
+    <button class="btn btn-edit">
       <%= link_to edit_major_path(@major) do %>
         <i class="fas fa-pencil-alt" style="color=white"></i>
       <% end %>
@@ -16,7 +16,7 @@
     <p><%= @major.name_en %></p>
     <label for="show">Name AR</label>
     <p><%= @major.name_ar %></p>
-    <label for="show">Status</label>              
+    <label for="show">Status</label>
     <p><%= @major.status %></p>
     <label for="show">Description EN</label>
     <p><%= @major.description_en %></p>
