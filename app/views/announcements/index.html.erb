@@ -25,9 +25,9 @@
       <tbody>
         <% @announcements.each do |announcement| %>
           <tr>
-            <td><%= announcement.title_en %></td>
-            <td><%= announcement.announcement_type %></td>
-            <td><%= announcement.user_type %></td>
+            <td><%= I18n.locale == :en ? announcement.title_en : announcement.title_ar%></td>
+            <td><%= t(announcement.announcement_type) %></td>
+            <td><%= t(announcement.user_type) %></td>
             <td>
               <button>                
                 <%= link_to announcement do %>
