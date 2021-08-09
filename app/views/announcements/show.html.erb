@@ -14,18 +14,22 @@
     </div>
   </div>
   <div class=" col-lg-12 border shadow-md rounded p-5 mt-5">
-    <label for="show"><%= t(:arabic_title)%></label>
-    <p><%= @announcement.title_ar %></p>
-    <label for="show"><%= t(:english_title)%></label>
-    <p><%= @announcement.title_en %></p>
-    <label for="show"><%= t(:arabic_description)%></label>              
-    <p><%= @announcement.description_ar %></p>
-    <label for="show"><%= t(:english_description)%></label>
-    <p><%= @announcement.description_en %></p>
+
+    <% if I18n.locale == :ar %>
+      <label for="show"><%= t(:arabic_title)%></label>
+      <p><%= @announcement.title_ar %></p>
+      <label for="show"><%= t(:arabic_description)%></label>              
+      <p><%= @announcement.description_ar %></p>
+    <% else %>
+      <label for="show"><%= t(:english_title)%></label>
+      <p><%= @announcement.title_en %></p>
+      <label for="show"><%= t(:english_description)%></label>
+      <p><%= @announcement.description_en %></p>
+    <% end %>
     <label for="show"><%= t(:announcement_type)%></label>
-    <p><%= @announcement.announcement_type %></p>
+    <p><%= t(@announcement.announcement_type) %></p>
     <label for="show"><%= t(:user_type)%></label>
-    <p><%= @announcement.user_type %></p>
+    <p><%= t(@announcement.user_type) %></p>
     <p><%= link_to t(:view_attachement), rails_blob_path(@announcement.attachment, disposition: "preview"), target: "_blank"%></td></p>
     </div>
     <br/>
