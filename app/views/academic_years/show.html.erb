@@ -1,2 +1,24 @@
-<h1>AcademicYears#show</h1>
-<p>Find me in app/views/academic_years/show.html.erb</p>
+<div class="row justify-content-start">
+  <div class="one-liner">
+    <button class="btn btn-back">          
+      <%= link_to academic_year_path do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    </button>
+  </div>
+  <div class=" col-lg-12 border shadow-md rounded p-5 mt-5">
+    <label for="show">Start Date</label>
+    <p><%= @year.start_date %></p>
+    <label for="show">End Date</label>
+    <p><%= @year.end_date %></p>
+    <label for="show">Semester</label>              
+    <p><%= @year.semester %></p>
+    <label for="show">Year</label>
+    <p><%= @year.year %></p>
+    <label for="show">Stauts</label>
+    <p><%= @year.status %></p>
+    </div>
+    <br/>
+    <br>    
+  </div>
+</div>
