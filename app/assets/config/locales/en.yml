@@ -31,4 +31,14 @@ en:
   hello: 'Hello,'
   update: 'Update'
   applicant_updated: 'Applicant was successfully updated.'
+<<<<<<< 1b33e70b570404e68fde0687250b9de47ab74b90
   
+=======
+  majors_name_in_en: 'Name in English'
+  majors_name_in_ar: 'Name in Arabic'
+  majors_status: 'Status'
+  majors_description_in_en: 'Description in English'
+  majors_description_in_ar: 'Description in Arabic'
+  active: 'Active'
+  not_active: 'Not Active'
+>>>>>>> Translating the active or not_active  status

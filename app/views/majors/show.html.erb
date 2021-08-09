@@ -17,7 +17,7 @@
     <div class="form-group label"><%= t(:majors_name_in_ar) %></div>
     <p><%= @major.name_ar %></p>
     <div class="form-group label"><%= t(:majors_status) %></div>
-    <p><%= @major.status %></p>
+    <p><%= @major.status == 'active' ? t(:active) : t(:not_active) %></p>
     <div class="form-group label"><%= t(:majors_description_in_en) %></div>
     <p><%= @major.description_en %></p>
     <div class="form-group label"><%= t(:majors_description_in_ar) %></div>
