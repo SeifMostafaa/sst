@@ -46,3 +46,8 @@ en:
   create_major: 'Create Major'
   edit_announcement: 'Edit Announcement'
   new_announcement: 'New Announcement'
+  announcements: 'Announcements'
+  title: 'Title'
+  announcement_type: 'Announcement Type'
+  user_type: 'User Type'
+  action: 'Action'

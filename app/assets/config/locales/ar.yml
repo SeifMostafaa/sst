@@ -46,3 +46,8 @@ ar:
   create_major: 'انشاء تخصص'
   edit_announcement: 'تعديل الإعلان'
   new_announcement: 'إعلان جديد'
+  announcements: 'الاعلانات'
+  title: 'اللقب'
+  announcement_type: 'نوع الاعلان'
+  user_type: 'نوع المستخدم'
+  action: 'اﻹجراء'
