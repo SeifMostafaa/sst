@@ -25,21 +25,21 @@
       </thead>
 
       <tbody>
-        <% @years.each do |year| %>
+        <% @academic_year.each do |academic_year| %>
           <tr>
-            <td><%= year.start_date %></td>
-            <td><%= year.end_date %></td>
-            <td><%= year.semester %></td>
-            <td><%= year.year %></td>
-            <td><%= year.status %></td>
+            <td><%= academic_year.start_date %></td>
+            <td><%= academic_year.end_date %></td>
+            <td><%= academic_year.semester %></td>
+            <td><%= academic_year.year %></td>
+            <td><%= academic_year.status %></td>
             <td>
               <button>                
-                <%= link_to year do %>
+                <%= link_to academic_year do %>
                   <i class="fas fa-eye"></i>
                 <% end %>
               </button>
               <button>                
-                <%= link_to year, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <%= link_to academic_year, method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class="fas fa-trash"></i>
                 <% end %>
               </button>              

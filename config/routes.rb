@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'academic_years/index'
-  get 'academic_years/show'
   devise_for :users
   authenticated :user do
     root 'pages#dashboard', as: :authenticated_root
