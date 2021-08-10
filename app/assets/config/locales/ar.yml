@@ -40,6 +40,5 @@ ar:
   not_active: 'غير مفعل'
   name: 'الاسم'
   description: 'الوصف'
-  status: 'الحالة'
   actions: 'الإجرائات'
   subjects: 'المواد'

@@ -3,7 +3,7 @@
 <div class="row justify-content-md-center">
   <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
     <div class="one-liner">
-      <h1>Majors</h1>
+      <h1><%= t(:majors) %></h1>
       <button class="btn btn-add">             
         <%= link_to new_major_path do %>
           <i class="fas fa-plus"></i>
@@ -15,10 +15,10 @@
     <table class="table table-striped">
       <thead>
         <tr class="label">
-          <th class="col-1">Name</th>
-          <th class="col-5">Description</th>
-          <th class="col-1">Status</th>
-          <th class="col-1">Actions</th>
+          <th class="col-1"><%= t(:name) %></th>
+          <th class="col-5"><%= t(:description) %></th>
+          <th class="col-1"><%= t(:majors_status) %></th>
+          <th class="col-1"><%= t(:actions) %></th>
           <th class="col-1"></th>
         </tr>
       </thead>

@@ -40,7 +40,6 @@ en:
   not_active: 'Not Active'
   name: 'Name'
   description: 'Description'
-  status: 'Status'
   actions: 'Actions'
   subjects: 'Subjects'
 
