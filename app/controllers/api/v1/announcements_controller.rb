@@ -58,7 +58,48 @@ class Api::V1::AnnouncementsController < ApplicationController
     announcements_by_user_role
   end
 
+  api :POST, 'api/v1/announcements/create', 'Create Announcement'
+  param :title_ar, String, desc: 'Arabic Title'
+  param :title_en, String, desc: 'English Title'
+  param :description_ar, String, desc: 'Arabic Description'
+  param :description_en, String, desc: 'English Description'
+  param :announcement_type, %w[event news notice], desc: 'Announcement Type'
+  param :user_type, %w[generic parents specific staff student teacher], desc: 'User Type'
+  param :attachment, Hash
+  returns code: 400, desc: 'An unsuccessful response' do
+    property :error, String, desc: 'There was an error saving the announcement. Please try again.'
+  end
+  returns code: 200, desc: 'A successful response' do
+    property :message, String,
+             desc: 'Announcement is successfully created.'
+  end
+  def create
+    @announcement = Announcement.new(announcement_params)
+    if @announcement.save
+      render(
+        json: { "message": 'Announcement is successfully created.' }
+      )
+    else
+      render(
+        json: { "error": 'There was an error saving the announcement. Please try again.' },
+        status: 400
+      )
+    end
+  end
+
   private
+
+  def announcement_params
+    params.permit(
+      :title_ar,
+      :title_en,
+      :description_ar,
+      :description_en,
+      :announcement_type,
+      :user_type,
+      :attachment
+    )
+  end
 
   def announcements_by_user_role
     case current_user.role

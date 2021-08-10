@@ -46,6 +46,7 @@ Rails.application.routes.draw do
         collection do
           get :by_student
           get :by_user_role
+          post :create
         end
       end
       resources :applicants, only: %i[create]
