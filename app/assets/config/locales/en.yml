@@ -38,3 +38,9 @@ en:
   majors_description_in_ar: 'Description in Arabic'
   active: 'Active'
   not_active: 'Not Active'
+  name: 'Name'
+  description: 'Description'
+  status: 'Status'
+  actions: 'Actions'
+  subjects: 'Subjects'
+
