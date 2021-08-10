@@ -44,3 +44,5 @@ ar:
   actions: 'الإجرائات'
   subjects: 'المواد'
   create_major: 'انشاء تخصص'
+  edit_announcement: 'تعديل الإعلان'
+  new_announcement: 'إعلان جديد'

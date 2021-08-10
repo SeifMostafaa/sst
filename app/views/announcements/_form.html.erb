@@ -1,34 +1,48 @@
-<div class="field">
-  <%= f.label "Arabic Title" %>
-  <%= f.text_field :title_ar, autofocus: true, autocomplete: "name-en" %><br />
+<div class="container grid">
+  <div class="form-group label"><%=t(:arabic_title)%></div>
+  <div class="item"><%= f.text_field :title_ar, class: "item", autofocus: true, autocomplete: "name-en" %></div>
 </div>
 
-<div class="field">
-  <%= f.label "English Title" %>
-  <%= f.text_field :title_en, autocomplete: "name-ar", required: true %><br />
+<br />
+
+<div class="container grid">
+  <div class="form-group label"><%=t(:english_title)%></div>
+  <div class="item"><%= f.text_field :title_en, class: "item", autocomplete: "name-ar", required: true %></div>
 </div>
 
-<div class="field">
-  <%= f.label "Arabic Description" %>
-  <%= f.text_area :description_ar, autofocus: true, autocomplete: "description-en" %><br />
+<br />
+
+<div class="container grid">
+  <div class="form-group label"><%=t(:arabic_description)%></div>
+  <div class="item"><%= f.text_area :description_ar, autofocus: true, autocomplete: "description-en", required: true, size: "52x5", style: "border: 1px solid #ccc; border-radius: 5px;" %></div>
 </div>
 
-<div class="field">
-  <%= f.label "English Description" %>
-  <%= f.text_area :description_en, autocomplete: "description-ar", required: true%><br />
+<br />
+
+<div class="container grid">
+  <div class="form-group label"><%=t(:english_description)%></div>
+  <div class="item"><%= f.text_area :description_en, autofocus: true, autocomplete: "description-ar", required: true, size: "52x5", style: "border: 1px solid #ccc; border-radius: 5px;"%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Announcement Type" %>
-  <%= f.select :announcement_type, collection: Announcement.announcement_types.keys%><br />
+<br />
+
+<div class="container grid">
+  <div class="form-group label"><%=t(:announcement_type)%></div>
+  <div class="item"><%= f.select(:announcement_type, t(Announcement.announcement_types.keys), {}, {:class => "item" })%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Users Type" %>
-  <%= f.select :user_type, collection: Announcement.user_types.keys%><br />
+<br />
+
+<div class="container grid">
+  <div class="form-group label"><%=t(:user_type)%></div>
+  <div class="item"><%= f.select(:user_type,t(Announcement.user_types.keys), {}, {:class => "item" })%></div>
 </div>
 
-<div class="field">
-  <%= f.label "Attachment" %>
-  <%= f.file_field :attachment%><br />
+<br />
+
+<div class="container grid">
+  <div class="form-group label"><%=t(:attachment)%></div>
+  <%= f.file_field :attachment, required: true%><br />
 </div>
+
+<br />
