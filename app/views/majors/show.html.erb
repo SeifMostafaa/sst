@@ -1,26 +1,26 @@
 <div class="row justify-content-start">
-  <div class="one-liner">
-    <button class="btn btn-back">          
-      <%= link_to majors_path do %>
+  <div class="one-liner wide">
+  <%= link_to majors_path do %>
+    <button class="btn btn-back">
         <i class="fas fa-arrow-left"></i>
-      <% end %>
-    </button>
-    <button class="btn btn-edit">          
+        </button>
+  <% end %>
+    <button class="btn btn-edit">
       <%= link_to edit_major_path(@major) do %>
         <i class="fas fa-pencil-alt" style="color=white"></i>
       <% end %>
     </button>
   </div>
   <div class=" col-lg-12 border shadow-md rounded p-5 mt-5">
-    <label for="show">Name EN</label>
+    <div class="form-group label"><%= t(:majors_name_in_en) %></div>
     <p><%= @major.name_en %></p>
-    <label for="show">Name AR</label>
+    <div class="form-group label"><%= t(:majors_name_in_ar) %></div>
     <p><%= @major.name_ar %></p>
-    <label for="show">Status</label>              
-    <p><%= @major.status %></p>
-    <label for="show">Description EN</label>
+    <div class="form-group label"><%= t(:majors_status) %></div>
+    <p><%= @major.status == 'active' ? t(:active) : t(:not_active) %></p>
+    <div class="form-group label"><%= t(:majors_description_in_en) %></div>
     <p><%= @major.description_en %></p>
-    <label for="show">Name AR</label>
+    <div class="form-group label"><%= t(:majors_description_in_ar) %></div>
     <p><%= @major.description_ar %></p>
     </div>
     <br/>
