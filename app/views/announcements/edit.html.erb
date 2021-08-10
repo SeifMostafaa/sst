@@ -14,7 +14,7 @@
     <br/>
 
 
-    <%= form_for(@announcement, url: announcements_path, method: :post) do |f| %>
+    <%= form_for(@announcement, url: announcements_path, method: :put) do |f| %>
 
     <%= render partial: "form", locals: { f: f } %>
     <br/>
