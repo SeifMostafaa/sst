@@ -36,6 +36,7 @@ en:
   majors_status: 'Status'
   majors_description_in_en: 'Description in English'
   majors_description_in_ar: 'Description in Arabic'
+  major_edit: "Edit Major"
   active: 'Active'
   not_active: 'Suspended'
   name: 'Name'

@@ -36,6 +36,7 @@ ar:
   majors_status: 'الحالة'
   majors_description_in_en: 'الوصف بالانجليزية'
   majors_description_in_ar: 'الوصف بالعربية'
+  major_edit: "تعديل التخصص"
   active: 'مفعل'
   not_active: 'متوقف'
   name: 'الاسم'
