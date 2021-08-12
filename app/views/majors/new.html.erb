@@ -15,10 +15,8 @@
 
 <tr><td>
   <%= form_for(@major, url: majors_path, method: :post) do |f| %>
-
     <%= render partial: "form", locals: { f: f } %>
 </td></tr>
-
 <tr><td>
   <div class="actions" align="right">
     <%= f.submit t(:create_major), class:"update-btn" %>

@@ -13,13 +13,11 @@
 <table border="20" bordercolor="white" bgcolor="white" cellpadding="10">
   <tr><td>
   <%= form_for(@major, url: major_path, method: :put) do |f| %>
-
     <%= render partial: "form", locals: { f: f } %>
   </td></tr>
-
   <tr><td>
     <div class="actions" align="right">
-      <%= f.submit t(:update) , class:"update-btn"%>
+    <%= f.submit t(:update) , class:"update-btn"%>
     </div>
   <% end %>
   </td></tr>
