@@ -2,28 +2,28 @@
   
   <tr>
     <div class="container grid">
-      <td><div class="form-group label">English Name</div></td>
+      <td><div class="form-group label"><%= t(:majors_name_in_en) %></div></td>
       <td><div class="item"><%= f.text_field :name_en, autofocus: true, autocomplete: "name-en" %></div></td>
     </div>
   </tr>
 
   <tr>
     <div class="container grid">
-      <td><div class="form-group label">Arabic Name</div></td>
+      <td><div class="form-group label"><%= t(:majors_name_in_ar) %></div></td>
       <td><div class="item"><%= f.text_field :name_ar, autocomplete: "name-ar", required: true %></div></td>
     </div>
   </tr>
 
   <tr>
     <div class="container grid">
-      <td><div class="form-group label">English Description</div></td>
+      <td><div class="form-group label"><%= t(:majors_description_in_en) %></div></td>
       <td><div class="item"><%= f.text_area :description_en, autofocus: true, autocomplete: "description-en" %></div></td>
     </div>
   </tr>
 
   <tr>
     <div class="container grid">
-      <td><div class="form-group label">Arabic Description</div></td>
+      <td><div class="form-group label"><%= t(:majors_description_in_ar) %></div></td>
       <td><div class="item"><%= f.text_area :description_ar, autocomplete: "description-ar", required: true%></div></td>
     </div>
   </tr>
