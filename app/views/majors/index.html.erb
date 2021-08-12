@@ -3,7 +3,7 @@
 <div class="row justify-content-md-center">
   <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
     <div class="one-liner">
-      <h1>Majors</h1>
+      <h1><%= t(:majors) %></h1>
       <button class="btn btn-add">             
         <%= link_to new_major_path do %>
           <i class="fas fa-plus"></i>
@@ -15,10 +15,10 @@
     <table class="table table-striped">
       <thead>
         <tr class="label">
-          <th class="col-1">Name</th>
-          <th class="col-5">Description</th>
-          <th class="col-1">Status</th>
-          <th class="col-1">Actions</th>
+          <th class="col-1"><%= t(:name) %></th>
+          <th class="col-5"><%= t(:description) %></th>
+          <th class="col-1"><%= t(:majors_status) %></th>
+          <th class="col-1"><%= t(:actions) %></th>
           <th class="col-1"></th>
         </tr>
       </thead>
@@ -26,9 +26,9 @@
       <tbody>
         <% @majors.each do |major| %>
           <tr>
-            <td><%= major.name_en %></td>
-            <td><%= major.description_en %></td>
-            <td><%= major.status %></td>
+            <td><%= I18n.locale == :en ? major.name_en : major.name_ar %></td>
+            <td><%= I18n.locale == :en ? major.description_en : major.description_ar %></td>
+            <td><%= major.status == 'active' ? t(:active) : t(:not_active) %></td>
             <td>
               <button>                
                 <%= link_to major do %>
@@ -47,7 +47,7 @@
               </button>              
             </td>
             <td>
-              <%= link_to 'Subjects', subjects_path(major_id: major.id)%>
+              <%= link_to t(:subjects), subjects_path(major_id: major.id)%>
             </td>
           </tr>
         <% end %>

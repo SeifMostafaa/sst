@@ -37,4 +37,9 @@ en:
   majors_description_in_en: 'Description in English'
   majors_description_in_ar: 'Description in Arabic'
   active: 'Active'
-  not_active: 'Not Active'
+  not_active: 'Suspended'
+  name: 'Name'
+  description: 'Description'
+  actions: 'Actions'
+  subjects: 'Subjects'
+
