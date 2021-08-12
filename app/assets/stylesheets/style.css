@@ -236,3 +236,22 @@ label[for='show'] {
 }
 
 
+#major_name_en, #major_name_ar{
+  border-radius: 5px;
+  width: 500px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: rgb(31, 71, 118);
+  font-weight: bold;
+}
+
+#major_description_en, #major_description_ar{
+  border-radius: 5px;
+  width: 500px;
+  height: 135px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: rgb(31, 71, 118);
+  font-weight: bold;
+}
