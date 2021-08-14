@@ -1,19 +1,31 @@
-<div class="field">
-  <%= f.label "English Name" %>
-  <%= f.text_field :name_en, autofocus: true, autocomplete: "name-en" %><br />
-</div>
+<table border="10" bordercolor="white" bgcolor="white" cellpadding="10" width="100%">
+  
+  <tr>
+    <div class="container grid">
+      <td><div class="form-group label"><%= t(:majors_name_in_en) %></div></td>
+      <td><div class="item"><%= f.text_field :name_en, autofocus: true, autocomplete: "name-en" %></div></td>
+    </div>
+  </tr>
 
-<div class="field">
-  <%= f.label "Arabic Name" %>
-  <%= f.text_field :name_ar, autocomplete: "name-ar", required: true %><br />
-</div>
+  <tr>
+    <div class="container grid">
+      <td><div class="form-group label"><%= t(:majors_name_in_ar) %></div></td>
+      <td><div class="item"><%= f.text_field :name_ar, autocomplete: "name-ar", required: true %></div></td>
+    </div>
+  </tr>
 
-<div class="field">
-  <%= f.label "English Description" %>
-  <%= f.text_area :description_en, autofocus: true, autocomplete: "description-en" %><br />
-</div>
+  <tr>
+    <div class="container grid">
+      <td><div class="form-group label"><%= t(:majors_description_in_en) %></div></td>
+      <td><div class="item"><%= f.text_area :description_en, autofocus: true, autocomplete: "description-en" %></div></td>
+    </div>
+  </tr>
 
-<div class="field">
-  <%= f.label "Arabic Description" %>
-  <%= f.text_area :description_ar, autocomplete: "description-ar", required: true%><br />
-</div>
+  <tr>
+    <div class="container grid">
+      <td><div class="form-group label"><%= t(:majors_description_in_ar) %></div></td>
+      <td><div class="item"><%= f.text_area :description_ar, autocomplete: "description-ar", required: true%></div></td>
+    </div>
+  </tr>
+
+</table>
