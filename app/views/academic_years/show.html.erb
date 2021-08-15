@@ -8,9 +8,9 @@
   </div>
   <div class=" col-lg-12 border shadow-md rounded p-5 mt-5">
     <label for="show">Start Date</label>
-    <p><%= @year.start_date %></p>
+    <p><%= @year.start_date.to_date %></p>
     <label for="show">End Date</label>
-    <p><%= @year.end_date %></p>
+    <p><%= @year.end_date.to_date %></p>
     <label for="show">Semester</label>              
     <p><%= @year.semester %></p>
     <label for="show">Year</label>
