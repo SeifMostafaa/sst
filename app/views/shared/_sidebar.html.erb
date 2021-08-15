@@ -5,44 +5,27 @@
     <nav id="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <ul class="list-unstyled components">
-            <li>
-                <a href="#"><i class="fas fa-chart-pie"></i> <%= t(:dashboard) %></a>
-            </li>
             <% if can? :manage, :users %>
-                <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
-                <ul class="collapse list-unstyled" id="accSubmenu">
-                    <li>
-                        <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
-                    </li>
-                    <li>
-                        <a href="#">Option 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Option 3</a>
-                    </li>
-                </ul>
-            <% end %>
-            <% if can? :manage, :majors %>
                 <li>
-                    <a href="#"><i class="fas fa-chart-pie"></i> Dashboard</a>
+                    <a href="#"><i class="fas fa-chart-pie"></i> <%= t(:dashboard) %></a>
                 </li>
                 <li class="active">
-                    <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> Accounts</a>
+                    <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
                     <ul class="collapse list-unstyled" id="accSubmenu">
                         <li>
                             <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Staff Accounts', users_path(role: User.roles["staff"]), method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Staff Accounts', users_path, method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Teacher Accounts', users_path(role: User.roles["teacher"]), method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Teacher Accounts', users_path, method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Student Accounts', users_path(role: User.roles["student"]), method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Student Accounts', users_path, method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Parent Accounts', users_path(role: User.roles["parent"]), method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Parent Accounts', users_path, method: :get, class: "dropdown-item") %>
                         </li>
                     </ul>
                 </li>
@@ -93,6 +76,7 @@
                     <a href="#">عربي</a>
                 </li>
             </ul>
+            <%end%>
         </nav>
 </div>
 

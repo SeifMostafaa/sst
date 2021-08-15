@@ -1,24 +1,8 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: %i[show edit update destroy]
+  before_action :set_user, only: %i[show edit update destroy]
 
   def index
-    # @pagy, @users = pagy(User.all, items: 10)
-    
-    role = params[:role]
-    if role == User.roles["staff"].to_s
-      @pagy, @users = pagy(User.staff, items: 10)
-    
-    elsif role == User.roles["teacher"].to_s
-      @pagy, @users = pagy(User.teacher, items: 10)
-    
-    elsif role == User.roles["student"].to_s
-      @pagy, @users = pagy(User.student, items: 10)
-    
-    elsif role == User.roles["parent"].to_s
-      @pagy, @users = pagy(User.parent, items: 10)
-    
-    end
-
+    @users = User.all
   end
 
   def show
