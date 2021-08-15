@@ -2,11 +2,47 @@ class Api::V1::UsersController < ApplicationController
   include ActionController::HttpAuthentication::Token::ControllerMethods
   before_action :authenticate_user?, except: [:forgot_password]
   before_action :set_user, only: %i[show edit update destroy update_locale]
+
+  api :GET, 'api/v1/users', 'Users'
+  param :role, %w[parents staff student teacher],
+        desc: "User's role, one of 4 possible string values"
+  returns code: 401, desc: 'Unauthorized'
+  returns code: 404, desc: 'Not Found'
+  returns code: 200, desc: 'a successful response' do
+    property :id, Integer, desc: "User's ID"
+    property :username, String, desc: "User's Username"
+    property :full_name_ar, String, desc: "User's arabic full name"
+    property :full_name_en, String, desc: "User's english full name"
+    property :role, %w[admin engineer parents staff student teacher],
+             desc: "User's role, one of 6 possible string values"
+    property :locale, %w[ar en], desc: "User's locale language, one of 2 possible string values"
+    property :phone, String, desc: "User's phone number"
+    property :date_of_birth, String, desc: "User's date of birth"
+    property :status, %w[active graduated inactive suspended],
+             desc: "User's status, one of 4 possible string values"
+    property :gender, %w[female male], desc: "User's gender, one of 2 possible string values"
+    property :email, String, desc: "User's email address"
+    property :national_id, String, desc: "User's national ID"
+    property :religion, %w[christian muslim], desc: "User's religion, one of 2 possible string values"
+    property :address_ar, String, desc: "User's arabic address"
+    property :address_en, String, desc: "User's english address"
+    property :city, ['alexandria'], desc: "User's city, one of 1 possible string values"
+  end
   def index
-    if authorized?
-      @users = User.all
+    case params[:role]
+    when 'student'
+      @users = User.student.all
+    when 'parents'
+      @users = User.parents.all
+    when 'teacher'
+      @users = User.teacher.all
+    when 'staff'
+      @users = User.staff.all
     else
-      handle_unauthorized
+      render(
+        json: { "error": 'User Role is not found' },
+        status: 404
+      )
     end
   end
 
