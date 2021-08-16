@@ -19,8 +19,10 @@ class ApplicationController < ActionController::Base
       @current_user_id = jwt_payload['id']
       @current_user = User.find(@current_user_id)
     rescue JWT::ExpiredSignature, JWT::VerificationError, JWT::DecodeError
-      head :unauthorized
-      body
+      render(
+        json: { "error": 'Invalid Access Token!' },
+        status: :unauthorized
+      )
     end
   end
 
