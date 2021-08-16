@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def create
     user = CreateUserService.call(user_params, current_user.role)
-    @response = if user.response.save
+    @response = if user.error.nil? && user.response.save
                   { successful: true, redirect_url: users_path }
                 else
                   { successful: false, errors: user.error }

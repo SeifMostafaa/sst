@@ -60,11 +60,7 @@ class UserValidator < ActiveModel::Validator
   end
 
   def validate_presence_of_phone
-    if @user.phone.blank?
-      @user.errors.add(:phone, 'Phone Number is missing.')
-    else
-      validate_phone_format
-    end
+    @user.errors.add(:phone, 'Phone Number is missing.') if @user.phone.blank?
   end
 
   def validate_phone_format
