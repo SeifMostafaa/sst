@@ -1,6 +1,7 @@
 class Api::V1::AnnouncementsController < ApplicationController
   include ActionController::HttpAuthentication::Token::ControllerMethods
   before_action :authenticate_user?
+  before_action :set_announcement, only: %i[destroy]
 
   api :GET, 'api/v1/announcements/by_student', 'Student Announcements'
   returns code: 401, desc: 'Unauthorized'
@@ -58,7 +59,7 @@ class Api::V1::AnnouncementsController < ApplicationController
     announcements_by_user_role
   end
 
-  api :POST, 'api/v1/announcements/create', 'Create Announcement'
+  api :POST, 'api/v1/announcements', 'Create Announcement'
   param :title_ar, String, desc: 'Arabic Title'
   param :title_en, String, desc: 'English Title'
   param :description_ar, String, desc: 'Arabic Description'
@@ -83,6 +84,29 @@ class Api::V1::AnnouncementsController < ApplicationController
       render(
         json: { "error": 'There was an error saving the announcement. Please try again.' },
         status: 400
+      )
+    end
+  end
+
+  api :DELETE, 'api/v1/announcements', 'Create Announcement'
+  param :id, Integer, desc: 'Announcement ID'
+  returns code: 404, desc: 'An unsuccessful response' do
+    property :error, String, desc: 'Announcement not found.'
+  end
+  returns code: 200, desc: 'A successful response' do
+    property :message, String,
+             desc: 'Announcement is successfully deleted.'
+  end
+  def destroy
+    if @announcement.present?
+      @announcement.destroy
+      render(
+        json: { "message": 'Announcement is successfully deleted.' }
+      )
+    else
+      render(
+        json: { "error": 'Announcement not found.' },
+        status: 404
       )
     end
   end
@@ -133,5 +157,9 @@ class Api::V1::AnnouncementsController < ApplicationController
     @events = Announcement.event.where(user_type: %i[teacher generic]).all
     @news = Announcement.news.where(user_type: %i[teacher generic]).all
     @notices = Announcement.notice.where(user_type: %i[teacher generic]).all
+  end
+
+  def set_announcement
+    @announcement = Announcement.find(params[:id])
   end
 end
