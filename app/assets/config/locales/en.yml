@@ -60,3 +60,8 @@ en:
   staff: 'Staff'
   student: 'Student'
   teacher: 'Teacher'
+  arabic_title: 'Arabic Title'
+  english_title: 'English Title'
+  arabic_description: 'Arabic Description'
+  english_description: 'English Description'
+  view_attachement: 'View Attachement'

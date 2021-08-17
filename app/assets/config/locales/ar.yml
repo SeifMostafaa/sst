@@ -60,3 +60,9 @@ ar:
   staff: 'عاملين'
   student: 'طالب'
   teacher: 'معلم'
+  arabic_title: 'العنوان بالعربية'
+  english_title: 'العنوان بالانجليزية'
+  arabic_description: 'الوصف بالعربية'
+  english_description: 'الوصف بالانجليزية'
+  view_attachement: 'إظهار المرفق'
+

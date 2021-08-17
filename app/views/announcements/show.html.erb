@@ -1,4 +1,5 @@
-<div class="row justify-content-start">
+<div class="row justify-content-md-center">
+  <div class="col-md-6 col-lg-12">
   <div class="one-liner">
     <button class="btn btn-back">          
       <%= link_to announcements_path do %>
@@ -10,23 +11,29 @@
         <i class="fas fa-pencil-alt" style="color=white"></i>
       <% end %>
     </button>
+    </div>
   </div>
   <div class=" col-lg-12 border shadow-md rounded p-5 mt-5">
-    <label for="show">Arabic Title</label>
-    <p><%= @announcement.title_ar %></p>
-    <label for="show">English Title</label>
-    <p><%= @announcement.title_en %></p>
-    <label for="show">Arabic Description</label>              
-    <p><%= @announcement.description_ar %></p>
-    <label for="show">English Description</label>
-    <p><%= @announcement.description_en %></p>
-    <label for="show">Announcement Type</label>
-    <p><%= @announcement.announcement_type %></p>
-    <label for="show">Users Type</label>
-    <p><%= @announcement.user_type %></p>
-    <p><%= link_to 'View Attachment', rails_blob_path(@announcement.attachment, disposition: "preview"), target: "_blank"%></td></p>
+
+    <% if I18n.locale == :ar %>
+      <label for="show"><%= t(:arabic_title)%></label>
+      <p><%= @announcement.title_ar %></p>
+      <label for="show"><%= t(:arabic_description)%></label>              
+      <p><%= @announcement.description_ar %></p>
+    <% else %>
+      <label for="show"><%= t(:english_title)%></label>
+      <p><%= @announcement.title_en %></p>
+      <label for="show"><%= t(:english_description)%></label>
+      <p><%= @announcement.description_en %></p>
+    <% end %>
+    <label for="show"><%= t(:announcement_type)%></label>
+    <p><%= t(@announcement.announcement_type) %></p>
+    <label for="show"><%= t(:user_type)%></label>
+    <p><%= t(@announcement.user_type) %></p>
+    <p><%= link_to t(:view_attachement), rails_blob_path(@announcement.attachment, disposition: "preview"), target: "_blank"%></td></p>
     </div>
     <br/>
     <br>    
+  </div>
   </div>
 </div>
