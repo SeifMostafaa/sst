@@ -3,7 +3,7 @@
 <div class="row justify-content-md-center">
   <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
     <div class="one-liner">
-      <h1>Majors</h1>
+      <h1><%= t(:announcements) %></h1>
       <button class="btn btn-add">             
         <%= link_to new_announcement_path do %>
           <i class="fas fa-plus"></i>
@@ -15,19 +15,19 @@
     <table class="table table-striped">
       <thead>
         <tr class="label">
-          <th class="col-2">Title</th>
-          <th class="col-2">Announcement Type</th>
-          <th class="col-2">User Type</th>
-          <th class="col-2">Actions</th>
+          <th class="col-2"><%= t(:title) %></th>
+          <th class="col-2"><%= t(:announcement_type) %></th>
+          <th class="col-2"><%= t(:user_type) %></th>
+          <th class="col-2"><%= t(:action) %></th>
         </tr>
       </thead>
 
       <tbody>
         <% @announcements.each do |announcement| %>
           <tr>
-            <td><%= announcement.title_en %></td>
-            <td><%= announcement.announcement_type %></td>
-            <td><%= announcement.user_type %></td>
+            <td><%= I18n.locale == :en ? announcement.title_en : announcement.title_ar%></td>
+            <td><%= t(announcement.announcement_type) %></td>
+            <td><%= t(announcement.user_type) %></td>
             <td>
               <button>                
                 <%= link_to announcement do %>
