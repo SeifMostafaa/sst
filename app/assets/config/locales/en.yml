@@ -44,3 +44,5 @@ en:
   actions: 'Actions'
   subjects: 'Subjects'
   create_major: 'Create Major'
+  edit_announcement: 'Edit Announcement'
+  new_announcement: 'New Announcement'

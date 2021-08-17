@@ -4,14 +4,22 @@
   <% end %>
 </button>
 
-<h2>New Major</h2>
 
-<%= form_for(@announcement, url: announcements_path, method: :post) do |f| %>
+<div class="row justify-content-md-center">
+    <div class="col-md-6 col-lg-12 border shadow-sm rounded p-3 mt-5 mb-3">
 
-  <%= render partial: "form", locals: { f: f } %>
 
-  <div class="actions">
-    <%= f.submit "Create Announcement" %>
+    <h1><%=t(:new_announcement)%></h1>
+    <br/>
+
+    <%= form_for(@announcement, url: announcements_path, method: :post) do |f| %>
+
+    <%= render partial: "form", locals: { f: f } %>
+    <br/>
+
+  <div class="form-group text-center">
+    <%= f.submit "Create Announcement", class: "btn btn-primary" %>
   </div>
 <% end %>
-
+  </div>
+</div>
