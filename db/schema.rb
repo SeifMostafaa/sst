@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_07_065347) do
+ActiveRecord::Schema.define(version: 2021_08_18_111438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 2021_08_07_065347) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deleted_at"], name: "index_announcements_on_deleted_at"
+  end
+
+  create_table "applicant_tests", force: :cascade do |t|
+    t.bigint "applicant_id", null: false
+    t.datetime "test_date"
+    t.integer "result"
+    t.text "notes"
+    t.integer "test_type"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["applicant_id"], name: "index_applicant_tests_on_applicant_id"
   end
 
   create_table "applicants", force: :cascade do |t|
@@ -234,6 +246,7 @@ ActiveRecord::Schema.define(version: 2021_08_07_065347) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "applicant_tests", "applicants"
   add_foreign_key "applicants", "majors", column: "major_first_choice_id"
   add_foreign_key "applicants", "majors", column: "major_second_choice_id"
   add_foreign_key "attendances", "subject_class_students"
