@@ -3,57 +3,78 @@
   <div class="item"><%= f.text_field :full_name, class: "item", placeholder: t(:full_name), :disabled => true%></div>
 </div>
 
+<br />
+
+
 <div class="container grid">
   <div class="form-group label"><%= t(:address) %></div>
   <div class="item"><%= f.text_field :address, class: "item", placeholder: t(:address), :disabled => true%></div>
 </div>
+
+<br />
 
 <div class="container grid">
   <div class="form-group label"><%= t(:date_of_birth) %></div>
   <div class="item"><%= f.date_field :date_of_birth, :disabled => true %></div>
 </div>
 
+<br />
+
 <div class="container grid">
   <div class="form-group label"><%= t(:preparatory_school) %></div>
   <div class="item"><%= f.text_field :preparatory_school, class: "item", placeholder: t(:preparatory_school), :disabled => true%></div>
 </div>
+
+<br />
 
 <div class="container grid">
   <div class="form-group label"><%= t(:parent_full_name) %></div>
   <div class="item"><%= f.text_field :parent_full_name, class: "item", placeholder: t(:parent_full_name), :disabled => true%></div>
 </div>
 
+<br />
+
 <div class="container grid">
   <div class="form-group label"><%= t(:parent_occupation) %></div>
   <div class="item"><%= f.text_field :parent_occupation, class: "item", placeholder: t(:parent_occupation), :disabled => true%></div>
 </div>
+
+<br />
 
 <div class="container grid">
   <div class="form-group label"><%= t(:parent_phone) %></div>
   <div class="item"><%= f.text_field :parent_phone, class: "item", placeholder: t(:parent_phone), :disabled => true%></div>
 </div>
 
+<br />
+
 <div class="container grid">
   <div class="form-group label"><%= t(:emergency_phone) %></div>
   <div class="item"><%= f.text_field :emergency_phone, class: "item", placeholder: t(:emergency_phone), :disabled => true%></div>
 </div>
+
+<br />
 
 <div class="container grid">
   <div class="form-group label"><%= t(:national_id) %></div>
   <div class="item"><%= f.text_field :national_id, class: "item", placeholder: t(:national_id), :disabled => true%></div>
 </div>
 
+<br />
+
 <div class="container grid">
   <div class="form-group label"><%= t(:notes) %></div>
-  <div class="item"><%= f.text_area :notes, class: "item", placeholder: t(:notes), :disabled => true%></div>
+  <div class="item"><%= f.text_area :notes, placeholder: t(:notes), :disabled => true%></div>
 </div>
+
+<br />
 
 <div class="container grid">
   <div class="form-group label"><%= t(:school_notes) %></div>
-  <div class="item"><%= f.text_area :school_notes, class: "item", placeholder: t(:school_notes)%></div>
+  <div class="item"><%= f.text_area :school_notes, placeholder: t(:school_notes)%></div>
 </div>
 
-<br>
+<br />
 
 <div class="divider">
 
@@ -68,6 +89,7 @@
   <div class="form-group label"><%= t(:registered) %></div>
   <div class="item"><%= f.check_box :registered, class: "item", placeholder: t(:registered)%></div>
 </div>
+
 <br>
 
 
