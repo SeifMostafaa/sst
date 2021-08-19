@@ -1,21 +1,31 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
-  def index
-    @users = User.all
+  def index    
+    role = params[:role]
+    if role == User.roles["staff"].to_s
+      @pagy, @users = pagy(User.staff, items: 10)
+    
+    elsif role == User.roles["teacher"].to_s
+      @pagy, @users = pagy(User.teacher, items: 10)
+    
+    elsif role == User.roles["student"].to_s
+      @pagy, @users = pagy(User.student, items: 10)
+    
+    elsif role == User.roles["parent"].to_s
+      @pagy, @users = pagy(User.parent, items: 10)
+    
+    end
+
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  def show; end
 
   def new
     @user = User.new
   end
 
-  def edit
-    @user = User.find(params[:id])
-  end
+  def edit; end
 
   def create
     user = CreateUserService.call(user_params, current_user.role)
@@ -49,12 +59,16 @@ class UsersController < ApplicationController
 
   private
 
+    def set_user
+      @user = User.find(params[:id])
+    end
+
     def user_params
       params.require(:user).permit(:email, :password, :locale, :role)
     end
 
-  def user_params
-    params.require(:user).permit(:address_ar, :address_en, :date_of_birth, :email, :password, :password_confirmation,
-                                 :full_name_en, :full_name_ar, :gender, :phone, :religion, :role, :username, :national_id)
-  end
+    def user_params
+      params.require(:user).permit(:address_ar, :address_en, :date_of_birth, :email, :password, :password_confirmation,
+                                   :full_name_en, :full_name_ar, :gender, :phone, :religion, :role, :username, :national_id)
+    end
 end

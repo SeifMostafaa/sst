@@ -9,27 +9,27 @@
                 <li>
                     <a href="#"><i class="fas fa-chart-pie"></i> <%= t(:dashboard) %></a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#accSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> <%= t(:accounts) %></a>
                     <ul class="collapse list-unstyled" id="accSubmenu">
                         <li>
                             <%= link_to(' New Account', new_user_path, method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Staff Accounts', users_path, method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Staff Accounts', users_path(role: User.roles["staff"]), method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Teacher Accounts', users_path, method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Teacher Accounts', users_path(role: User.roles["teacher"]), method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Student Accounts', users_path, method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Student Accounts', users_path(role: User.roles["student"]), method: :get, class: "dropdown-item") %>
                         </li>
                         <li>
-                            <%= link_to(' Parent Accounts', users_path, method: :get, class: "dropdown-item") %>
+                            <%= link_to(' Parent Accounts', users_path(role: User.roles["parent"]), method: :get, class: "dropdown-item") %>
                         </li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#classSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-users" aria-hidden="true"></i> Classes</a>
                     <ul class="collapse list-unstyled" id="classSubmenu">
                         <li>
@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#courseSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-book-reader"></i> Courses</a>
                     <ul class="collapse list-unstyled" id="courseSubmenu">
                         <li>

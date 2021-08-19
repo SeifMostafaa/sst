@@ -21,10 +21,12 @@
 			<tr class="label">
 			<th class="col-2">Name</th>
 			<th class="col-1">Username</th>
-			<th class="col-1">Major</th>
+			<%if @users.first.role == "student"%>
+				<th class="col-1">Major</th>
+				<th class="col-1">Parent</th>
+			<% end %>
 			<th class="col-1">Year</th>
 			<th class="col-1">Phone</th>
-			<th class="col-1">Parent</th>
 			<th class="col-1"></th>
 			</tr>
 		</thead>
@@ -33,24 +35,27 @@
 			<% @users.each do |user| %>
 				<tr>
 					<td>
-						<a class="user-link"><%=user.full_name_en%></a>
-						<span class="user-subhead"><%= user.role%></span>
+						<%=user.full_name_en%>
 					</td>
 					<td>
 						<%=user.username%>
 					</td>
+					<%if user.role == "student"%>
+
+						<td>
+							<!-- major -->
+						</td>
+						<td>
+							<!-- parent -->
+						</td>
+					<% end %>
 					<td>
-						<!-- major -->
-					</td>
-					<td>
-						<%=user.created_at%>
+						<%=user.created_at.year%>
 					</td>
 					<td>
 						<%=user.phone%>
 					</td>
-					<td>
-						<!-- parent -->
-					</td>
+
 					<td>
 						<button>                
 							<%= link_to user do %>
@@ -73,7 +78,9 @@
 		</tbody>
 	</table>
 			</div>
+					<%== pagy_combo_nav_js(@pagy)%>
+
 		</div>
-		</div>
+	</div>
 </div>
 </div>
