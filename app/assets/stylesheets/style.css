@@ -255,3 +255,17 @@ label[for='show'] {
   color: rgb(31, 71, 118);
   font-weight: bold;
 }
+.full-bleed{
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.applicants-container{
+  max-width: 1500px;
+  margin: 0 auto;
+  min-width: 1300px;
+}
